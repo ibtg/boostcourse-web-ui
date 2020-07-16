@@ -81,13 +81,13 @@ body {
   margin: 0;
 }
 
-.components li {
+.components .components__item {
   margin-top: 30px;
   box-sizing: border-box;
   border: 1px #d1d1d1 solid;
 }
 
-.components li a {
+.components .components__item > a {
   display: flex;
   align-items: center;
   height: 46px;
@@ -107,6 +107,10 @@ body {
 } */
 
 /* table */
+
+.table__container {
+  margin: 30px;
+}
 
 /* first table */
 .table__childSize table {
@@ -145,6 +149,9 @@ body {
 
 /* second stable */
 
+.table__refund {
+  margin-top: 40px;
+}
 .table__refund caption {
   text-align: left;
   font-size: 14px;
@@ -188,55 +195,72 @@ body {
 
 /* form */
 
-.form__container .form__title {
-  margin-bottom: 8px;
-  font-size: 14px;
-  color: #000;
-  font-weight: bold;
-}
-.form__container form {
-  background-color: #fbfbfb;
-  padding: 20px;
-  font-size: 14px;
-  font-weight: bold;
-  color: #000;
-}
-
-.form__container label {
+.info__title {
   display: block;
   text-align: left;
-  margin: 8px 0;
+  font-size: 14px;
+  color: #000;
+  font-weight: bold;
 }
 
-.info__container {
+.form__container {
+  margin: 30px;
+}
+.form__container .form__title {
+  margin-bottom: 12px;
+  font-size: 14px;
+  color: #000;
+  font-weight: bold;
+}
+
+/* info__container  */
+
+.form__container .info__container {
+  background-color: #fbfbfb;
+  padding: 20px;
+  /* font-size: 14px;
+  font-weight: bold;
+  color: #000; */
   border: 1px #e4e4e4 solid;
   padding: 20px;
 }
 
-.info__container > label input {
+/* .info__container .info {
+  display: block;
+} */
+
+.info__container .info > label input {
   width: 100%;
   font-size: 12px;
   color: #000;
   margin-top: 8px;
   box-sizing: border-box;
+  line-height: 24px;
+}
+
+.info__container .info .info__title {
+  margin-top: 12px;
 }
 
 /* birth */
 
-.birth__container .birth__title {
-  text-align: left;
-  margin-bottom: 8px;
+.birth__container .info__title {
+  margin-top: 12px;
 }
 
 .birth__container .birth {
   display: flex;
   justify-content: space-between;
-  padding: 0px;
-  width: 100%;
+  /* padding: 0px; */
+  /* width: 100%; */
+  margin-top: 8px;
 }
 
-.birth__container select {
+.birth__container .birth select {
   width: 100%;
+  font-size: 12px;
+  color: #000;
+  padding: 4px 0;
 }
 
 .birth__container select:nth-child(2) {
@@ -245,64 +269,94 @@ body {
 
 /* gender */
 .gender__container {
-  margin-top: 8px;
+  margin-top: 12px;
 }
 .gender__container .gender__title {
   text-align: left;
 }
 
 .gender__container .gender {
+  margin-top: 8px;
   display: flex;
 }
 
 .gender__container .gender {
   font-size: 12px;
   color: #000;
-  font-weight: normal;
 }
 
 .gender__container .gender > label:nth-child(2) {
-  margin-left: 24px;
+  margin-left: 48px;
+}
+
+/* email */
+
+.email__container {
+  margin-top: 12px;
+}
+
+.email__container > label input {
+  margin-top: 8px;
+  line-height: 24px;
+  box-sizing: border-box;
+  width: 100%;
 }
 
 /* phone */
 
 .phone__container {
-  text-align: left;
-  width: 100%;
+  margin-top: 12px;
+  /* width: 100%; */
 }
 
+/* .phone__container .number__container label input {
+  width: 100%;
+} */
 /* number */
 
 .number__container {
+  margin-top: 8px;
   display: flex;
+  justify-content: space-between;
 }
-.number__container > label {
+/* .number__container > label {
   margin-right: 12px;
   width: 100%;
 }
-.number__container > label input {
+*/
+.number__container .number {
   box-sizing: border-box;
-
-  width: 100%;
+  flex-grow: 6;
+  line-height: 24px;
 }
+
 .number__container > button {
+  flex-grow: 1;
   border: 1px #08a600;
   background-color: #4ec53d;
   font-size: 12px;
   color: #fff;
+  margin-left: 8px;
+  cursor: pointer;
 }
 
-.certification > label input {
+.certification {
   box-sizing: border-box;
+  margin-top: 8px;
+}
+
+.certification input {
   width: 100%;
+  line-height: 24px;
+  box-sizing: border-box;
 }
 
 /* hobby */
 .hobby__title {
-  text-align: left;
+  margin-top: 12px;
 }
 .hobby__list {
+  margin-top: 8px;
   display: flex;
   justify-content: space-between;
   padding-right: 24px;
@@ -311,19 +365,23 @@ body {
 .hobby__list .hobby__element {
   display: flex;
   align-items: center;
+  font-size: 12px;
+  color: #000;
 }
 .hobby__list .hobby__element > input {
-  margin: 0;
+  margin-right: 4px;
 }
 
 /* greeting */
 
 .greeting__container .greeting__title {
-  text-align: left;
+  margin-top: 12px;
 }
 
 .greeting__container .greeting__area > textarea {
+  margin-top: 8px;
   width: 100%;
+  box-sizing: border-box;
 }
 
 /* join */
@@ -333,7 +391,234 @@ body {
   font-size: 16px;
   color: #fff;
   width: 100%;
+  line-height: 32px;
+  margin-top: 12px;
+  cursor: pointer;
 }
+
+/* list */
+
+.list__container {
+  margin: 30px;
+}
+
+.project {
+  margin-top: 12px;
+  border: 1px #e4e4e4 solid;
+  padding: 32px 12px;
+}
+
+.project .project__name {
+  text-align: center;
+  font-size: 32px;
+  color: #000;
+  font-weight: bold;
+}
+
+/* definition */
+
+.definition__title span:first-child {
+  font-size: 14px;
+  font-weight: bold;
+  color: #000;
+}
+.definition__title span:nth-child(2) {
+  font-size: 12px;
+  color: #559bfa;
+}
+
+.definition {
+  margin-top: 8px;
+  font-size: 12px;
+  color: #000;
+}
+
+.definition__second {
+  margin-top: 12px;
+}
+
+/* search */
+
+.search__container {
+  margin-top: 40px;
+}
+
+.rank__container {
+  margin-top: 12px;
+  border: 1px #e4e4e4 solid;
+  padding: 20px;
+  width: 200px;
+}
+
+.rank__container .rank {
+  margin-bottom: 8px;
+}
+.rank__container .rank span {
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  line-height: 17px;
+  border: 1px #e0e0e0 solid;
+  color: #666;
+  font-size: 10px;
+  text-align: center;
+}
+
+.rank__container .rank > a {
+  font-size: 12px;
+  color: #000;
+  text-decoration: none;
+}
+
+.rank > a:hover {
+  text-decoration: underline;
+}
+
+/* cookie */
+
+.cookie__container {
+  margin-top: 40px;
+}
+.cookie__content {
+  margin-top: 8px;
+  padding: 20px;
+}
+.cookie__content {
+  border: 1px #e4e4e4 solid;
+}
+
+.cookie__content ul {
+  padding-left: 12px;
+}
+.cookie__content li {
+  font-size: 12px;
+  color: #000;
+  list-style: disc;
+  margin: 6px 0;
+}
+
+.cookie__content li:first-child {
+  font-weight: bold;
+}
+.cookie__content li span,
+.cookie__content li a {
+  color: #559bfa;
+}
+
+.cookie__content li span {
+  color: #559bfa;
+  line-height: 12px;
+}
+
+.cookie__content li:nth-child(2) span {
+  color: #ec5336;
+}
+
+.cookie__content li:last-child {
+  line-height: 16px;
+}
+
+/* news */
+
+.news__container {
+  margin-top: 40px;
+}
+
+.news__content {
+  margin-top: 8px;
+  border: 1px #e4e4e4 solid;
+  padding: 0 20px;
+}
+
+.news__body {
+  display: flex;
+  font-size: 12px;
+  color: #000;
+  border-bottom: 1px #e4e4e4 solid;
+  padding: 20px 0;
+}
+
+.news__body > a {
+  margin-right: 8px;
+}
+.news__article > a {
+  font-size: 14px;
+  color: #00c;
+  font-weight: bold;
+}
+
+.news__article > div {
+  margin-top: 4px;
+  line-height: 18px;
+}
+.news__first {
+}
+/* webtoon */
+
+.webtoon__container {
+  margin-top: 40px;
+}
+
+.webtoon__content {
+  display: flex;
+  /* justify-content: space-between; */
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+.webtoon > a {
+  text-decoration: none;
+}
+
+.webtoon > a:hover {
+  text-decoration: underline;
+}
+.webtoon .webtoon__title {
+  font-size: 14px;
+  color: #000;
+  font-weight: bold;
+  margin: 4px 0;
+}
+.webtoon__content .webtoon__subtitle {
+  font-size: 12px;
+  color: #000;
+}
+.webtoon__content {
+  margin-top: 8px;
+  border: 1px #e4e4e4 solid;
+  padding: 20px 21px 20px 20px;
+}
+
+.webtoon {
+  margin-bottom: 16px;
+}
+.webtoon:nth-child(3n-1) {
+  margin: 0 20px;
+}
+/* .webtoon:nth-child(2) {
+  margin: 0 20px;
+}
+
+.webtoon:nth-child(5) {
+  margin: 0 20px;
+} */
+
+.webtoon .cutoon {
+  border: 1px #71b036 solid;
+  background-color: #80c83d;
+  font-size: 10px;
+  color: #fff;
+  padding: 2px 4px;
+}
+
+.webtoon .smartoon {
+  border: 1px #df4e28 solid;
+  background-color: #ec5336;
+  font-size: 10px;
+  color: #fff;
+  padding: 2px 4px;
+  margin-right: 4px;
+}
+
 /* footer */
 .footer {
   border-top: 1px #d1d1d1 solid;

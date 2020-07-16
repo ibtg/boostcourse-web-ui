@@ -188,22 +188,32 @@ body {
 
 /* form */
 
+.form__container .form__title {
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #000;
+  font-weight: bold;
+}
 .form__container form {
   background-color: #fbfbfb;
+  padding: 20px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #000;
 }
 
-label {
+.form__container label {
   display: block;
-  /* width: 100%; */
   text-align: left;
   margin: 8px 0;
 }
 
 .info__container {
   border: 1px #e4e4e4 solid;
+  padding: 20px;
 }
 
-.info__container input {
+.info__container > label input {
   width: 100%;
   font-size: 12px;
   color: #000;
@@ -211,6 +221,119 @@ label {
   box-sizing: border-box;
 }
 
+/* birth */
+
+.birth__container .birth__title {
+  text-align: left;
+  margin-bottom: 8px;
+}
+
+.birth__container .birth {
+  display: flex;
+  justify-content: space-between;
+  padding: 0px;
+  width: 100%;
+}
+
+.birth__container select {
+  width: 100%;
+}
+
+.birth__container select:nth-child(2) {
+  margin: 0 8px;
+}
+
+/* gender */
+.gender__container {
+  margin-top: 8px;
+}
+.gender__container .gender__title {
+  text-align: left;
+}
+
+.gender__container .gender {
+  display: flex;
+}
+
+.gender__container .gender {
+  font-size: 12px;
+  color: #000;
+  font-weight: normal;
+}
+
+.gender__container .gender > label:nth-child(2) {
+  margin-left: 24px;
+}
+
+/* phone */
+
+.phone__container {
+  text-align: left;
+  width: 100%;
+}
+
+/* number */
+
+.number__container {
+  display: flex;
+}
+.number__container > label {
+  margin-right: 12px;
+  width: 100%;
+}
+.number__container > label input {
+  box-sizing: border-box;
+
+  width: 100%;
+}
+.number__container > button {
+  border: 1px #08a600;
+  background-color: #4ec53d;
+  font-size: 12px;
+  color: #fff;
+}
+
+.certification > label input {
+  box-sizing: border-box;
+  width: 100%;
+}
+
+/* hobby */
+.hobby__title {
+  text-align: left;
+}
+.hobby__list {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 24px;
+}
+
+.hobby__list .hobby__element {
+  display: flex;
+  align-items: center;
+}
+.hobby__list .hobby__element > input {
+  margin: 0;
+}
+
+/* greeting */
+
+.greeting__container .greeting__title {
+  text-align: left;
+}
+
+.greeting__container .greeting__area > textarea {
+  width: 100%;
+}
+
+/* join */
+.join__container .join {
+  border: 1px #08a600;
+  background-color: #4ec53d;
+  font-size: 16px;
+  color: #fff;
+  width: 100%;
+}
 /* footer */
 .footer {
   border-top: 1px #d1d1d1 solid;

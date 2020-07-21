@@ -10,6 +10,11 @@ body {
   background-color: #000;
 }
 
+.wraper {
+  margin: 0 auto;
+  padding: 40px;
+  width: 1000px;
+}
 /* header */
 .title {
   box-sizing: border-box;
@@ -25,12 +30,6 @@ body {
 }
 
 /* lists */
-
-.lists__container {
-  margin: 0 auto;
-  padding: 40px;
-  width: 1000px;
-}
 
 .lists {
   display: flex;
@@ -65,8 +64,6 @@ body {
   border-color: #454545;
   font-weight: bold;
 }
-
-/* elements */
 
 .elements__title {
   font-size: 20px;

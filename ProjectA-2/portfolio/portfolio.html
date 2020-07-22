@@ -7,24 +7,34 @@
     <link rel="stylesheet" href="./css/portfolio.css" />
   </head>
   <body>
-    <div class="header__container">
-      <header class="header">포트폴리오</header>
-    </div>
+    <!-- header -->
+    <header>
+      <div class="title__container">
+        <h1 class="title">포트폴리오</h1>
+      </div>
+    </header>
 
-    <div class="element__container">
-      <ul class="elements__list">
-        <li><a href="#table">테이블 요소</a></li>
-        <li><a href="#form">폼 요소</a></li>
-        <li><a href="#list">리스트 요소</a></li>
-      </ul>
+    <div class="wraper">
+      <!-- list -->
+      <div class="lists__container">
+        <ul class="lists">
+          <li><a href="#table">테이블 요소</a></li>
+          <li><a href="#form">폼 요소</a></li>
+          <li><a href="#list">리스트 요소</a></li>
+        </ul>
+      </div>
 
-      <div class="element__components">
-        <div class="element__title">구성요소</div>
-        <ul class="components">
+      <!-- elements -->
+      <div class="elements__container">
+        <h2 class="elements__title">구성요소</h2>
+        <div class="elements">
+
           <!-- table -->
-          <li class="components__item">
-            <a id="table">테이블 요소 </a>
+          <section class="element">
+            <h3 class="element__title"><a id="table">테이블 요소 </a></h3>
             <div class="table__container">
+              
+              <!-- first table -->
               <div class="table__childSize">
                 <table>
                   <caption>
@@ -32,22 +42,22 @@
                   </caption>
                   <thead>
                     <tr>
-                      <th colspan="3">구분</th>
-                      <th colspan="2">Small</th>
-                      <th colspan="2">Medium</th>
-                      <th colspan="2">Large</th>
-                      <th colspan="2">X-Large</th>
+                      <th colspan="3" scope="col">구분</th>
+                      <th colspan="2" scope="col">Small</th>
+                      <th colspan="2" scope="col">Medium</th>
+                      <th colspan="2" scope="col">Large</th>
+                      <th colspan="2" scope="col">X-Large</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
-                      <td colspan="2" rowspan="4">
+                      <th colspan="2" rowspan="4" scope="rowgroup">
                         미국 남아 <br />
                         [Boys 2-7]
-                      </td>
+                      </th>
                     </tr>
                     <tr>
-                      <td>사이즈</td>
+                      <th scope="row">사이즈</th>
                       <td>2T</td>
                       <td>3T</td>
                       <td>4T</td>
@@ -57,7 +67,7 @@
                       <td colspan="2">7</td>
                     </tr>
                     <tr>
-                      <td>키</td>
+                      <th scope="row">키</th>
                       <td>84-91</td>
                       <td>91-99</td>
                       <td>91-99</td>
@@ -67,7 +77,7 @@
                       <td colspan="2">122-130</td>
                     </tr>
                     <tr>
-                      <td>몸무게</td>
+                      <th scope="row">몸무게</th>
                       <td>13-15</td>
                       <td>14-15</td>
                       <td>13-15</td>
@@ -78,13 +88,13 @@
                     </tr>
 
                     <tr>
-                      <td colspan="2" rowspan="4">
+                      <th colspan="2" rowspan="4" scope="rowgroup">
                         미국 여아 <br />
                         [Girs 2-6X]
-                      </td>
+                      </th>
                     </tr>
                     <tr>
-                      <td>사이즈</td>
+                      <th scope="row">사이즈</th>
                       <td>2T</td>
                       <td>3T</td>
                       <td>4T</td>
@@ -94,7 +104,7 @@
                       <td colspan="2">6X</td>
                     </tr>
                     <tr>
-                      <td>키</td>
+                      <th scope="row">키</th>
                       <td>84-91</td>
                       <td>91-99</td>
                       <td>91-99</td>
@@ -104,7 +114,7 @@
                       <td colspan="2">122-130</td>
                     </tr>
                     <tr>
-                      <td>몸무게</td>
+                      <th scope="row">몸무게</th>
                       <td>13-15</td>
                       <td>14-15</td>
                       <td>13-15</td>
@@ -116,63 +126,66 @@
                   </tbody>
                 </table>
               </div>
-              <div class="table__refund">
-                <table>
-                  <caption>
-                    환불 가능 금액 조회
-                  </caption>
-                  <thead>
-                    <tr>
-                      <th>구분</th>
 
-                      <th>환불가능액</th>
-
-                      <th>수수료</th>
-
-                      <th>총 환불금액</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>게임 보상금액</td>
-                      <td>100,000원</td>
-                      <td>1,000원</td>
-                      <td>99,000원</td>
-                    </tr>
-                    <tr>
-                      <td>월정액제 보상금액</td>
-                      <td>10,000원</td>
-                      <td>5,000원</td>
-                      <td>5,000원</td>
-                    </tr>
-                    <tr>
-                      <td>코인</td>
-                      <td>9,000원</td>
-                      <td>500원</td>
-                      <td>8,500원</td>
-                    </tr>
-                  </tbody>
-                  <tfoot>
-                    <tr>
-                      <td>총합계</td>
-                      <td>119,000원</td>
-                      <td>6,500원</td>
-                      <td>112,500원</td>
-                    </tr>
-                  </tfoot>
-                </table>
-              </div>
+            <!-- second table -->
+            <div class="table__refund">
+              <table>
+                <caption>
+                  환불 가능 금액 조회
+                </caption>
+                <thead>
+                  <tr>
+                    <th scope="col" >구분</th>
+                    <th scope="col">환불가능액</th>
+                    <th scope="col">수수료</th>
+                    <th scope="col">총 환불금액</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">게임 보상금액</th>
+                    <td>100,000원</td>
+                    <td>1,000원</td>
+                    <td>99,000원</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">월정액제 보상금액</th>
+                    <td>10,000원</td>
+                    <td>5,000원</td>
+                    <td>5,000원</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">코인</th>
+                    <td>9,000원</td>
+                    <td>500원</td>
+                    <td>8,500원</td>
+                  </tr>
+                </tbody>
+                <tfoot>
+                  <tr>
+                    <th scope="row">총합계</th>
+                    <td>119,000원</td>
+                    <td>6,500원</td>
+                    <td>112,500원</td>
+                  </tr>
+                </tfoot>
+              </table>
             </div>
-          </li>
+          </section>
+
           <!-- form -->
-          <li class="components__item">
-            <a id="form">폼 요소</a>
+          <section class="element">
+            <h3 class="element__title"><a id="form">폼 요소</a></h3>
             <div class="form__container">
               <form action="">
+
                 <div class="form__title">
                   회원가입
                 </div>
+
                 <div class="info__container">
+
+                  <!-- id, password, name -->
                   <div class="info">
                     <label for="id" class="info__title"
                       >아이디
@@ -197,6 +210,7 @@
                   <!-- birth -->
                   <div class="birth__container">
                     <div class="info__title">생년월일</div>
+
                     <div class="birth">
                       <select name="year" id="">
                         <option selected>년도</option>
@@ -211,7 +225,7 @@
                       </select>
                     </div>
                   </div>
-
+                  
                   <!-- gender -->
                   <div class="gender__container">
                     <div class="gender__title info__title">
@@ -226,7 +240,7 @@
                       </label>
                     </div>
                   </div>
-
+                
                   <!-- email -->
                   <div class="email__container info__title">
                     <label for="email">
@@ -238,7 +252,7 @@
                       />
                     </label>
                   </div>
-
+                  
                   <!-- phone -->
                   <div class="phone__container">
                     <div class="phone__title info__title">
@@ -252,6 +266,7 @@
                       />
                       <button>인증번호 받기</button>
                     </div>
+
                     <div class="certification">
                       <input
                         type="text"
@@ -259,6 +274,7 @@
                       />
                     </div>
                   </div>
+
                   <!-- hobby -->
                   <div class="hobby_container">
                     <div class="hobby__title info__title">
@@ -306,6 +322,7 @@
                       </div>
                     </div>
                   </div>
+
                   <!-- greeting -->
                   <div class="greeting__container">
                     <div class="greeting__title info__title">
@@ -315,28 +332,33 @@
                       <textarea name="" id="" cols="30" rows="10"></textarea>
                     </div>
                   </div>
+
                   <!-- join -->
                   <div class="join__container">
                     <button class="join">가입하기</button>
                   </div>
-                </div>
+
               </form>
             </div>
-          </li>
-          <!-- list -->
-          <li class="components__item">
-            <a id="list">리스트 요소</a>
+          </section>
+
+          <!-- lists -->
+          <section class="element">
+            <h3 class="element__title"><a id="list">리스트 요소</a></h3>
             <div class="list__container">
+
               <!-- project -->
               <div class="project__container">
                 <div class="project__title info__title">
                   '프로젝트' 사전 검색 결과
                 </div>
+
                 <div class="project">
                   <div class="project__name">
                     프로젝트
                   </div>
                   <div class="definition__container">
+                    
                     <div class="definition__first">
                       <div class="definition__title">
                         <span>프로젝트</span>
@@ -349,6 +371,7 @@
                         </div>
                       </div>
                     </div>
+
                     <div class="definition__second">
                       <div class="definition__title">
                         <span>프로젝트</span>
@@ -360,6 +383,7 @@
                         </div>
                       </div>
                     </div>
+
                   </div>
                 </div>
               </div>
@@ -510,8 +534,7 @@
                   </div>
                 </div>
               </div>
-
-              <!-- webtoon -->
+              
               <div class="webtoon__container">
                 <div class="webtoon__title info__title">
                   웹툰
@@ -584,19 +607,26 @@
                       </div>
                     </a>
                   </div>
+
                 </div>
               </div>
+
             </div>
-          </li>
-        </ul>
+
+          </section>
+
+
+        </div>
       </div>
     </div>
-    <footer class="footer">
-      <div class="info__container">
-        <div class="info__address">
+
+    <!-- contact -->
+    <footer>
+      <div class="contact__container">
+        <div class="contact__address">
           주소: 경기도 성남시 분당구, E-MAIL: honggildong@naver.com
         </div>
-        <div class="info__copyright">
+        <div class="contact__copyright">
           Copyright © Hong Gil Dong. All Rights Reserved.
         </div>
       </div>

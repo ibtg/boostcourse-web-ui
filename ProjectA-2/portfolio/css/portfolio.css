@@ -5,12 +5,14 @@ body {
   margin: 0;
 }
 
-.header__container {
+/* header */
+
+.title__container {
   height: 120px;
   background-color: #000;
 }
-/* header */
-.header {
+
+.title {
   box-sizing: border-box;
   margin: 0 auto;
   width: 1080px;
@@ -29,25 +31,33 @@ body {
   width: 1000px;
 }
 
-/* elements__list */
-.elements__list {
+/* wraper for lists and elements */
+.wraper {
+  margin: 0 auto;
+  padding: 40px;
+  width: 1000px;
+}
+
+/* lists */
+
+.lists {
   display: flex;
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
-.elements__list li {
+.lists li {
   list-style: none;
   width: 100%;
   height: 100%;
 }
 
-.elements__list li:nth-child(2) {
+.lists li:nth-child(2) {
   margin: 0 14px;
 }
 
-.elements__list li a {
+.lists li a {
   box-sizing: border-box;
   border: 1px #d1d1d1 solid;
   height: 33px;
@@ -59,14 +69,14 @@ body {
   color: #000;
 }
 
-.elements__list li a:hover {
+.lists li a:hover {
   border-color: #454545;
   font-weight: bold;
 }
 
-/* element__components */
+/* elements */
 
-.element__title {
+.elements__title {
   font-size: 20px;
   color: #000;
   font-weight: bold;
@@ -75,19 +85,14 @@ body {
   padding-bottom: 20px;
 }
 
-.components {
-  list-style: none;
-  padding-left: 0;
-  margin: 0;
-}
-
-.components .components__item {
+.element {
   margin-top: 30px;
   box-sizing: border-box;
   border: 1px #d1d1d1 solid;
 }
 
-.components .components__item > a {
+.element__title {
+  margin: 0;
   display: flex;
   align-items: center;
   height: 46px;
@@ -100,16 +105,18 @@ body {
   font-weight: bold;
 }
 
-/* .components li div {
-  padding: 30px;
-  font-size: 12px;
-  color: #000;
-} */
-
 /* table */
 
 .table__container {
   margin: 30px;
+}
+
+.table__childSize caption {
+  text-align: left;
+  font-size: 14px;
+  color: #000;
+  font-weight: bold;
+  margin-bottom: 18px;
 }
 
 /* first table */
@@ -122,14 +129,6 @@ body {
   text-align: center;
 }
 
-.table__childSize caption {
-  text-align: left;
-  font-size: 14px;
-  color: #000;
-  font-weight: bold;
-  margin-bottom: 12px;
-}
-
 .table__childSize thead {
   background-color: #fbfbfb;
 }
@@ -139,9 +138,6 @@ body {
   padding: 8px;
 }
 
-.table__childSize td:first-child {
-  font-weight: bold;
-}
 .table__childSize td {
   border: 1px #e4e4e4 solid;
   padding: 8px;
@@ -157,7 +153,7 @@ body {
   font-size: 14px;
   color: #000;
   font-weight: bold;
-  margin-bottom: 12px;
+  margin-bottom: 18px;
 }
 
 .table__refund table {
@@ -179,12 +175,20 @@ body {
   padding: 8px 8px;
 }
 
+.table__refund th {
+  font-weight: normal;
+}
+
 .table__refund td {
   padding: 8px 8px;
 }
 
 .table__refund td:not(:first-child) {
   text-align: right;
+}
+
+.table__refund tfoot th {
+  font-weight: bold;
 }
 
 .table__refund tfoot {
@@ -215,21 +219,14 @@ body {
 
 /* info__container  */
 
-.form__container .info__container {
+.info__container {
   background-color: #fbfbfb;
   padding: 20px;
-  /* font-size: 14px;
-  font-weight: bold;
-  color: #000; */
   border: 1px #e4e4e4 solid;
   padding: 20px;
 }
 
-/* .info__container .info {
-  display: block;
-} */
-
-.info__container .info > label input {
+.info > label input {
   width: 100%;
   font-size: 12px;
   color: #000;
@@ -238,21 +235,22 @@ body {
   line-height: 24px;
 }
 
-.info__container .info .info__title {
-  margin-top: 12px;
+.info .info__title {
+  margin-top: 18px;
+  font-size: 14px;
+  color: #000;
+  font-weight: bold;
 }
 
 /* birth */
 
 .birth__container .info__title {
-  margin-top: 12px;
+  margin-top: 18px;
 }
 
 .birth__container .birth {
   display: flex;
   justify-content: space-between;
-  /* padding: 0px; */
-  /* width: 100%; */
   margin-top: 8px;
 }
 
@@ -260,7 +258,7 @@ body {
   width: 100%;
   font-size: 12px;
   color: #000;
-  padding: 4px 0;
+  height: 32px;
 }
 
 .birth__container select:nth-child(2) {
@@ -269,7 +267,7 @@ body {
 
 /* gender */
 .gender__container {
-  margin-top: 12px;
+  margin-top: 18px;
 }
 .gender__container .gender__title {
   text-align: left;
@@ -278,13 +276,13 @@ body {
 .gender__container .gender {
   margin-top: 8px;
   display: flex;
-}
-
-.gender__container .gender {
   font-size: 12px;
   color: #000;
 }
 
+.gender > label:first-child {
+  margin-left: -2px;
+}
 .gender__container .gender > label:nth-child(2) {
   margin-left: 48px;
 }
@@ -292,7 +290,7 @@ body {
 /* email */
 
 .email__container {
-  margin-top: 12px;
+  margin-top: 18px;
 }
 
 .email__container > label input {
@@ -305,25 +303,15 @@ body {
 /* phone */
 
 .phone__container {
-  margin-top: 12px;
-  /* width: 100%; */
+  margin-top: 18px;
 }
-
-/* .phone__container .number__container label input {
-  width: 100%;
-} */
-/* number */
 
 .number__container {
   margin-top: 8px;
   display: flex;
   justify-content: space-between;
 }
-/* .number__container > label {
-  margin-right: 12px;
-  width: 100%;
-}
-*/
+
 .number__container .number {
   box-sizing: border-box;
   flex-grow: 6;
@@ -338,6 +326,7 @@ body {
   color: #fff;
   margin-left: 8px;
   cursor: pointer;
+  box-sizing: border-box;
 }
 
 .certification {
@@ -352,14 +341,17 @@ body {
 }
 
 /* hobby */
+
 .hobby__title {
-  margin-top: 12px;
+  margin-top: 18px;
 }
+
 .hobby__list {
   margin-top: 8px;
   display: flex;
   justify-content: space-between;
   padding-right: 24px;
+  margin-left: -2px;
 }
 
 .hobby__list .hobby__element {
@@ -375,7 +367,7 @@ body {
 /* greeting */
 
 .greeting__container .greeting__title {
-  margin-top: 12px;
+  margin-top: 18px;
 }
 
 .greeting__container .greeting__area > textarea {
@@ -391,7 +383,7 @@ body {
   font-size: 16px;
   color: #fff;
   width: 100%;
-  line-height: 32px;
+  height: 36px;
   margin-top: 12px;
   cursor: pointer;
 }
@@ -405,7 +397,7 @@ body {
 .project {
   margin-top: 12px;
   border: 1px #e4e4e4 solid;
-  padding: 32px 12px;
+  padding: 32px 20px;
 }
 
 .project .project__name {
@@ -431,6 +423,7 @@ body {
   margin-top: 8px;
   font-size: 12px;
   color: #000;
+  line-height: 18px;
 }
 
 .definition__second {
@@ -481,14 +474,13 @@ body {
 }
 .cookie__content {
   margin-top: 8px;
-  padding: 20px;
-}
-.cookie__content {
+  padding: 14px 20px;
   border: 1px #e4e4e4 solid;
 }
 
 .cookie__content ul {
   padding-left: 12px;
+  margin: 0;
 }
 .cookie__content li {
   font-size: 12px;
@@ -561,7 +553,6 @@ body {
 
 .webtoon__content {
   display: flex;
-  /* justify-content: space-between; */
   flex-wrap: wrap;
   box-sizing: border-box;
 }
@@ -594,13 +585,6 @@ body {
 .webtoon:nth-child(3n-1) {
   margin: 0 20px;
 }
-/* .webtoon:nth-child(2) {
-  margin: 0 20px;
-}
-
-.webtoon:nth-child(5) {
-  margin: 0 20px;
-} */
 
 .webtoon .cutoon {
   border: 1px #71b036 solid;
@@ -620,22 +604,23 @@ body {
 }
 
 /* footer */
-.footer {
-  border-top: 1px #d1d1d1 solid;
-}
 
-.info__container {
+footer {
+  height: 150px;
+}
+.contact__container {
+  border-top: 1px #d1d1d1 solid;
   margin: 0 auto;
   text-align: center;
 }
 
-.info__address {
+.contact__address {
   margin-top: 24px;
   font-size: 12px;
   color: #999;
 }
 
-.info__copyright {
+.contact__copyright {
   margin-top: 12px;
   font-size: 12px;
   color: #000;

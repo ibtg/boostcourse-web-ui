@@ -1,10 +1,30 @@
 html,
-body {
+body,
+h1,
+p,
+ol,
+li {
   margin: 0;
   padding: 0;
+}
+
+body {
   font-family: '나눔 고딕', 'NanumGothic', '돋움', 'Dotum', 'sans-serif';
 }
 
+ol {
+  list-style: none;
+}
+.blind {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden;
+}
+
+/* header */
 .header__img {
   position: fixed;
   background-color: rgba(64, 64, 64, 0.75);
@@ -18,4 +38,46 @@ body {
 .header__img a {
   position: absolute;
   left: 100px;
+}
+
+/* invite */
+
+.invite {
+  background: #fff;
+  width: 100%;
+}
+
+.invite__container {
+  position: relative;
+  width: 1920px;
+  height: 750px;
+  margin: 0 auto;
+  background: url('../image/section_invite.jpg') no-repeat 0 0;
+}
+
+.invite__contents {
+  position: absolute;
+  top: 400px;
+  left: 600px;
+}
+
+/* creater */
+
+.creator {
+  background: #f9939d;
+  width: 100%;
+}
+
+.creator__container {
+  position: relative;
+  width: 1920px;
+  height: 822px;
+  margin: 0 auto;
+  background: url('../image/section_creator.jpg') no-repeat center;
+}
+
+.creator__contents {
+  position: absolute;
+  top: 400px;
+  left: 500px;
 }

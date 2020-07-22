@@ -1,0 +1,21 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: '나눔 고딕', 'NanumGothic', '돋움', 'Dotum', 'sans-serif';
+}
+
+.header__img {
+  position: fixed;
+  background-color: rgba(64, 64, 64, 0.75);
+  height: 46px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  z-index: 10;
+}
+
+.header__img a {
+  position: absolute;
+  left: 100px;
+}

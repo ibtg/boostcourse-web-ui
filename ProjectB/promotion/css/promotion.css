@@ -206,3 +206,66 @@ li {
 .item__image:hover .item__discount {
   opacity: 1;
 }
+
+/* recipe */
+
+.recipe__container {
+  position: relative;
+  height: 1030px;
+  background: url('../image/pattern_recipe.png') repeat-x center;
+  background-color: #b893f9;
+}
+
+.recipe__container .recipe__imageContainer {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.recipe__images {
+  background: url('../image/section_recipe.png') no-repeat;
+  width: 980px;
+  height: 681px;
+  position: relative;
+}
+
+.recipe__images .recipe {
+  width: 480px;
+  height: 482px;
+  display: inline-block;
+}
+.recipe__images .recipe > a {
+  display: inline-block;
+  width: inherit;
+  height: inherit;
+}
+
+.recipe__images .cake {
+  margin-top: 200px;
+}
+
+.recipe__images .tart {
+  margin-top: 200px;
+  margin-left: 14px;
+}
+
+/* recipe__buttons */
+
+.recipe__buttons {
+  margin: 40px auto;
+  width: 310px;
+  height: 91px;
+  background: url('../image/go_recipe.gif');
+}
+
+.recipe__buttons:hover {
+  background: url('../image/go_recipe_over.gif');
+}
+
+.recipe__buttons > a {
+  display: inline-block;
+  width: 310px;
+  height: 91px;
+}

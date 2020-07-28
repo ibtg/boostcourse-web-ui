@@ -372,3 +372,17 @@ footer {
   align-items: center;
   height: 100%;
 }
+
+/* TOP */
+
+.top__icon {
+  background: url('../image/go_top.gif') no-repeat;
+  height: 96px;
+  width: 96px;
+  position: fixed;
+  bottom: 180px;
+  right: 0px;
+}
+
+.top__icon:active {
+}

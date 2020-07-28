@@ -23,6 +23,8 @@ ol,
 li {
   list-style: none;
 }
+
+/* blinds for IR */
 .blind {
   position: absolute;
   width: 1px;
@@ -36,11 +38,12 @@ li {
 .header__img {
   position: fixed;
   background-color: rgba(64, 64, 64, 0.75);
-  height: 46px;
+  height: 44px;
   width: 100%;
   display: flex;
   align-items: center;
   z-index: 10;
+  padding: 12px 0;
 }
 
 .header__img a {
@@ -51,14 +54,16 @@ li {
 /* invite */
 
 .invite {
-  /* background: #fff; */
+  background: #fff;
   width: 100%;
 }
 
 .invite__container {
   position: relative;
   height: 750px;
-  background: url('../image/section_invite.jpg') no-repeat center;
+  max-width: 1920px;
+  background: url('../image/section_invite.jpg') no-repeat;
+  margin: 0 auto;
 }
 
 .invite__contents {
@@ -70,13 +75,14 @@ li {
 /* creater */
 
 .creator {
-  /* background: #f9939d; */
+  background: #f9939d;
   width: 100%;
 }
 
 .creator__container {
   position: relative;
   height: 822px;
+  max-width: 1920px;
   background: url('../image/section_creator.jpg') no-repeat center;
 }
 
@@ -89,12 +95,16 @@ li {
 /* store */
 
 .store {
+  background: #d5e43f;
   width: 100%;
 }
+
 .store__container {
   position: relative;
   height: 1084px;
+  max-width: 1920px;
   background: url('../image/section_store.jpg') no-repeat center;
+  margin: 0 auto;
 }
 
 .store__contents {
@@ -119,9 +129,6 @@ li {
   width: 980px;
 }
 
-/* .list__items li {
-  display: flex;
-} */
 .lists__items > li:not(:nth-child(4n-3)) {
   padding-left: 20px;
   box-sizing: border-box;
@@ -147,22 +154,21 @@ li {
 }
 
 /* store - item__info */
+
 .item__info .item__title {
   font-size: 20px;
   color: #1b1d21;
 }
 
-.item__info .item__price {
+.item__info .item__price .price {
   font-size: 28px;
-  font-weight: bold;
+
   color: #1b1d21;
 }
 
 .item__info .item__price .unit {
   font-size: 20px;
   color: #1b1d21;
-  font-weight: normal;
-  margin-left: -8px;
 }
 
 .item__info .item__title.clamp {
@@ -218,11 +224,15 @@ li {
 
 .recipe__container .recipe__imageContainer {
   height: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
+
+/* recipe - recipe__images */
 
 .recipe__images {
   background: url('../image/section_recipe.png') no-repeat;
@@ -264,15 +274,30 @@ li {
   background: url('../image/go_recipe_over.gif');
 }
 
-.recipe__buttons > a {
-  display: inline-block;
+/* recipe__buttons */
+
+.recipe__buttons {
+  display: block;
+  margin: 40px auto;
   width: 310px;
   height: 91px;
+  background: url('../image/go_recipe.gif');
+}
+
+.recipe__buttons:hover {
+  background: url('../image/go_recipe_over.gif');
 }
 
 /* faq */
 
+.faq {
+  width: 100%;
+  background: #fff;
+}
+
 .faq__container {
+  max-width: 1920px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -286,17 +311,19 @@ li {
   margin-bottom: 28px;
 }
 
+/* faq__lists */
+
 .faq__lists {
   width: 900px;
 }
 
-.faq__item {
+.faq__lists .faq__item {
   display: flex;
   flex-direction: column;
   border-bottom: 1px #a1a5ad solid;
 }
 
-.faq__item:first-child {
+.faq__lists .faq__item:first-child {
   border-top: 1px #a1a5ad solid;
 }
 
@@ -318,15 +345,17 @@ li {
   font-size: 20px;
   line-height: 28px;
   color: #1b1d21;
-  font-weight: bold;
 }
 
 .questionArrow__container .arrow__icon {
   background-color: #fff;
   border: none;
+  margin-top: -20px;
+  margin-bottom: -20px;
+  padding: 20px;
 }
 .questionArrow__container .arrow__icon .arrow__up {
-  background: url('../image/icon_arrow_up.gif') no-repeat;
+  background: url('../image/icon_arrow_up.gif') no-repeat 50% 50%;
   width: 24px;
   height: 20px;
 }
@@ -373,6 +402,10 @@ footer {
   height: 100%;
 }
 
+.footer__content > strong {
+  margin: 0 4px;
+}
+
 /* TOP */
 
 .top__icon {
@@ -382,7 +415,4 @@ footer {
   position: fixed;
   bottom: 180px;
   right: 0px;
-}
-
-.top__icon:active {
 }

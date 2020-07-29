@@ -1,7 +1,16 @@
 body,
 ul,
+ol,
 li,
-h1 {
+h1,
+div,
+h2,
+p,
+table,
+th,
+td,
+tr,
+figure {
   padding: 0;
   margin: 0;
 }
@@ -18,6 +27,20 @@ li {
 a {
   text-decoration: none;
 }
+
+.blind {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  clip: rect(0, 0, 0, 0);
+  margin: -1px;
+  overflow: hidden;
+}
+/* header */
+header {
+  max-width: 980px;
+}
+
 /* navbar */
 
 .navbar {
@@ -81,13 +104,15 @@ a {
 
 .container {
   background-color: #f0f0f0;
+  padding: 24px 15px;
+  /* width: 988px;
+  margin: 0 auto; */
 }
 
 /*name */
 
 .cake__Wrap {
-  padding: 24px 15px;
-  margin-bottom: 1px #c1c1c1 solid;
+  border-bottom: 1px #c1c1c1 solid;
 }
 .cake__name {
   font-size: 28px;
@@ -120,4 +145,105 @@ a {
 
 .cake__item .info__number {
   font-family: 'tahoma';
+}
+
+/* food info */
+
+.food__info {
+  margin: 20px 0;
+  padding-bottom: 12px;
+}
+.info__title {
+  font-size: 16px;
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+.info__contents {
+  font-size: 14px;
+  color: #666;
+  line-height: 24px;
+}
+
+.food__info .food__link {
+  color: #3b9a7b;
+}
+
+/* ingredients */
+.ingredients__info {
+  margin: 20px 0;
+  padding-bottom: 12px;
+}
+
+/* recipe */
+.recipe__info {
+  padding-bottom: 12px;
+  margin: 20px 0;
+}
+
+.recipe__info > .info__contents > li {
+  list-style-type: decimal;
+  list-style-position: inside;
+  text-indent: -20px;
+  padding-left: 20px;
+}
+
+/* table*/
+
+.recipe__table {
+  width: 100%;
+  border: 1px #c1c1c1 solid;
+  border-collapse: collapse;
+  margin-bottom: 24px;
+}
+
+.recipe__table > thead {
+  background-color: #eaeaea;
+  text-align: left;
+}
+
+.recipe__table th {
+  font-size: 16px;
+  color: #333;
+  font-weight: bold;
+  height: 32px;
+  border: 1px #c1c1c1 solid;
+  padding: 8px;
+}
+
+.recipe__table td {
+  font-size: 14px;
+  color: #666;
+  padding: 8px;
+  border: 1px #c1c1c1 solid;
+}
+
+/* images */
+
+.images {
+}
+.images__item {
+  margin-top: 40px;
+}
+.images__item .image__ingredients {
+  background: url('../image/strawberry_cake_material.jpg') no-repeat;
+  background-size: contain;
+  width: 100%px;
+  height: 300px;
+}
+
+.images .image__title {
+  width: 100%;
+  padding-top: 12px;
+  text-align: center;
+  font-size: 14px;
+  color: #666;
+}
+
+.images__item .image__cake {
+  background: url('../image/strawberry_cake.jpg') no-repeat;
+  background-size: contain;
+  width: 100%px;
+  height: 300px;
 }

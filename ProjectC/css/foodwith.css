@@ -1,6 +1,7 @@
 body,
 ul,
-li {
+li,
+h1 {
   padding: 0;
   margin: 0;
 }
@@ -80,4 +81,43 @@ a {
 
 .container {
   background-color: #f0f0f0;
+}
+
+/*name */
+
+.cake__Wrap {
+  padding: 24px 15px;
+  margin-bottom: 1px #c1c1c1 solid;
+}
+.cake__name {
+  font-size: 28px;
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.cake__items {
+  font-size: 14px;
+  /* display: flex; */
+}
+
+.cake__item {
+  display: flex;
+  width: 100%;
+}
+
+.cake__item > div:first-child {
+  font-size: 14px;
+  color: #767676;
+  font-weight: bold;
+  padding-bottom: 12px;
+  width: 118px;
+}
+
+.cake__item > div:last-child {
+  color: #666;
+}
+
+.cake__item .info__number {
+  font-family: 'tahoma';
 }

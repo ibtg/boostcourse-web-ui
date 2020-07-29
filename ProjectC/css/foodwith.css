@@ -1,0 +1,83 @@
+body,
+ul,
+li {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: '나눔 고딕', 'NanumGothic', '돋움', 'Dotum', 'sans-serif';
+}
+
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+/* navbar */
+
+.navbar {
+  width: 100%;
+  background-color: #fff;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav__logo {
+  display: block;
+  background: url('../image/logo_m.png') no-repeat 90% 50%;
+  background-size: 96px 24px;
+  width: 114px;
+  height: 100%;
+}
+
+/* navbar -- navbar__menu */
+
+.navbar__menu {
+  display: none;
+  flex-direction: column;
+}
+
+.navbar__menu__item {
+  padding: 8px 12px;
+  font-size: 18px;
+}
+
+.navbar__menu__item > a {
+  color: #333;
+}
+
+/* navbar - nav__toggleBtn */
+.nav__toggleBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 46px;
+  height: 50px;
+}
+.nav__toggleBtn .toggle__checkbox {
+  position: absolute;
+  appearance: none;
+  /* cursor: pointer; */
+}
+
+.nav__toggleBtn .toggle__image {
+  height: 28px;
+}
+.nav__toggleBtn .toggle__label {
+  cursor: pointer;
+}
+
+/* .nav__toggleBtn .toggle__checkbox:checked .navbar__menu {
+  display: flex;
+} */
+
+/* container */
+
+.container {
+  background-color: #f0f0f0;
+}

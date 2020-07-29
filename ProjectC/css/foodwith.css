@@ -247,3 +247,31 @@ header {
   width: 100%px;
   height: 300px;
 }
+
+/* footer */
+
+footer {
+  height: 92px;
+  background-color: #fff;
+  width: 100%;
+}
+
+.contact__contaier {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin: 0 auto;
+  width: 300px;
+}
+
+.contact__contaier .contact {
+  color: #333;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.contact__contaier .copyright > span {
+  font-weight: bold;
+}

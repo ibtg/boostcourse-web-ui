@@ -6,19 +6,14 @@ h1,
 div,
 h2,
 p,
-table,
-th,
-td,
-tr,
+header,
 figure {
   padding: 0;
   margin: 0;
 }
 
 body {
-  padding: 0;
-  margin: 0;
-  font-family: '나눔 고딕', 'NanumGothic', '돋움', 'Dotum', 'sans-serif';
+  font-family: '나눔 고딕', NanumGothic, '돋움', Dotum, sans-serif;
 }
 
 li {
@@ -36,10 +31,12 @@ a {
   margin: -1px;
   overflow: hidden;
 }
+
 /* header */
-/* header {
-  max-width: 980px;
-} */
+header {
+  padding: 0 10px;
+  background-color: #fff;
+}
 
 /* navbar */
 
@@ -51,54 +48,67 @@ a {
   justify-content: space-between;
 }
 
-.nav__logo {
+.navbar .nav__logo {
   display: block;
-  background: url('../image/logo_m.png') no-repeat 90% 50%;
+  background: url('../image/logo_m.png') no-repeat 50%;
   background-size: 96px 24px;
   width: 114px;
   height: 100%;
 }
 
-/* navbar -- navbar__menu */
+/* nav toggle */
 
-.navbar__menu {
+.toggle__checkbox {
+  position: absolute;
+  appearance: none;
   display: none;
-  flex-direction: column;
 }
 
-.navbar__menu__item {
-  padding: 8px 12px;
-  font-size: 18px;
+.toggle__checkbox:checked ~ .navbar__menu__list {
+  top: 50px;
+  width: 100%;
+  text-align: center;
+  height: 128px;
+  z-index: 10;
+  background-color: #fff;
+  margin-left: -10px;
+  padding: 10px 0;
+  box-sizing: border-box;
 }
 
-.navbar__menu__item > a {
-  color: #333;
-}
-
-/* navbar - nav__toggleBtn */
-.nav__toggleBtn {
+.toggle__label {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
+  cursor: pointer;
+  padding: 12px 8px;
+  box-sizing: border-box;
   width: 46px;
   height: 50px;
 }
-.nav__toggleBtn .toggle__checkbox {
+
+.toggle__image {
+  width: 100%;
+  height: 100%;
+}
+
+/* nav menu */
+.navbar__menu__list {
   position: absolute;
-  appearance: none;
-  /* cursor: pointer; */
+  height: 0px;
+  overflow: hidden;
 }
 
-.nav__toggleBtn .toggle__image {
-  height: 28px;
-}
-.nav__toggleBtn .toggle__label {
-  cursor: pointer;
+.navbar__menu__list .navbar__menu__item {
+  height: 36px;
+  padding: 8px 12px;
+  box-sizing: border-box;
+  font-size: 18px;
 }
 
-/* .nav__toggleBtn .toggle__checkbox:checked .navbar__menu {
-  display: flex;
-} */
+.navbar__menu__list .navbar__menu__item > a {
+  color: #333;
+}
 
 /* container */
 
@@ -107,11 +117,13 @@ a {
   padding: 24px 15px;
 }
 
-/*name */
+/* sction name */
 
 .cake__Wrap {
+  padding-bottom: 24px;
   border-bottom: 1px #c1c1c1 solid;
 }
+
 .cake__name {
   font-size: 28px;
   color: #333;
@@ -119,21 +131,18 @@ a {
   margin-bottom: 20px;
 }
 
-.cake__items {
-  font-size: 14px;
-  /* display: flex; */
-}
-
 .cake__item {
+  font-size: 14px;
   display: flex;
   width: 100%;
+  padding-bottom: 12px;
 }
 
 .cake__item > div:first-child {
   font-size: 14px;
   color: #767676;
   font-weight: bold;
-  padding-bottom: 12px;
+
   width: 118px;
 }
 
@@ -148,7 +157,7 @@ a {
 /* food info */
 
 .food__info {
-  margin: 20px 0;
+  margin: 24px 0;
   padding-bottom: 12px;
 }
 .info__title {
@@ -166,6 +175,7 @@ a {
 
 .food__info .food__link {
   color: #3b9a7b;
+  text-decoration: underline;
 }
 
 /* ingredients */
@@ -189,6 +199,11 @@ a {
 
 /* table*/
 
+.recipe__table caption {
+  position: relative;
+  /* to prevent breaking border collapse */
+}
+
 .recipe__table {
   width: 100%;
   border: 1px #c1c1c1 solid;
@@ -196,18 +211,9 @@ a {
   margin-bottom: 24px;
 }
 
-.recipe__table > thead {
+.recipe__table thead {
   background-color: #eaeaea;
   text-align: left;
-}
-
-.recipe__table th {
-  font-size: 16px;
-  color: #333;
-  font-weight: bold;
-  height: 32px;
-  border: 1px #c1c1c1 solid;
-  padding: 8px;
 }
 
 .recipe__table td {
@@ -215,6 +221,16 @@ a {
   color: #666;
   padding: 8px;
   border: 1px #c1c1c1 solid;
+  border-top: 0;
+}
+
+.recipe__table th {
+  font-size: 16px;
+  color: #333;
+  font-weight: bold;
+  border: 1px #c1c1c1 solid;
+  height: 32px;
+  padding: 8px;
 }
 
 /* images */
@@ -268,13 +284,31 @@ footer {
 /* For above 768px */
 
 @media screen and (min-width: 768px) {
-  .nav__toggleBtn {
+  header {
+    padding: 0 10px;
+  }
+
+  .navbar__menu__item:last-child {
+    padding: 8px 12px;
+    padding-right: 0;
+  }
+
+  .toggle__label {
     display: none;
   }
+  .navbar__menu__list {
+    position: relative;
+    height: 50px;
+    width: 100%;
+  }
+
   .navbar__menu {
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    height: 100%;
   }
 
   .navbar__menu > li > a {
@@ -299,7 +333,11 @@ footer {
   header {
     max-width: 980px;
     margin: 0 auto;
-    background-color: blue;
+  }
+
+  .navbar__menu__item:last-child {
+    padding: 8px 12px;
+    padding-right: 0;
   }
 
   .nav__logo {

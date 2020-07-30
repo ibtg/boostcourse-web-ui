@@ -37,9 +37,9 @@ a {
   overflow: hidden;
 }
 /* header */
-header {
+/* header {
   max-width: 980px;
-}
+} */
 
 /* navbar */
 
@@ -102,11 +102,9 @@ header {
 
 /* container */
 
-.container {
+.container__wrap {
   background-color: #f0f0f0;
   padding: 24px 15px;
-  /* width: 988px;
-  margin: 0 auto; */
 }
 
 /*name */
@@ -221,33 +219,22 @@ header {
 
 /* images */
 
-.images {
-}
-.images__item {
-  margin-top: 40px;
-}
-.images__item .image__ingredients {
-  background: url('../image/strawberry_cake_material.jpg') no-repeat;
-  background-size: contain;
+.image {
   width: 100%;
-  height: 300px;
-  background-size: 100% 100%;
+  height: 100%;
 }
 
-.images .image__title {
+.images__item {
+  max-width: 600px;
+  margin: 0 auto;
+  margin-bottom: 32px;
+}
+.images__item .image__title {
   width: 100%;
   padding-top: 12px;
   text-align: center;
   font-size: 14px;
   color: #666;
-}
-
-.images__item .image__cake {
-  background: url('../image/strawberry_cake.jpg') no-repeat;
-  background-size: contain;
-  width: 100%;
-  height: 300px;
-  background-size: 100% 100%;
 }
 
 /* footer */
@@ -276,4 +263,71 @@ footer {
 
 .contact__contaier .copyright > span {
   font-weight: bold;
+}
+
+/* For above 768px */
+
+@media screen and (min-width: 768px) {
+  .nav__toggleBtn {
+    display: none;
+  }
+  .navbar__menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .navbar__menu > li > a {
+    font-size: 18px;
+    color: #333;
+  }
+  .cake__info {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .images__item {
+    max-width: 600px;
+    margin: 0 auto;
+    margin-bottom: 32px;
+  }
+}
+
+/* For above 1024px */
+
+@media screen and (min-width: 1024px) {
+  header {
+    max-width: 980px;
+    margin: 0 auto;
+    background-color: blue;
+  }
+
+  .nav__logo {
+    display: block;
+    background: url('../image/logo_pc.png') no-repeat 50%;
+    background-size: 96px 24px;
+    background-position: left;
+    width: 114px;
+    height: 100%;
+  }
+
+  .navbar__menu > li > a {
+    font-size: 22px;
+    color: #333;
+  }
+
+  .navbar__menu > li:hover {
+    font-weight: bold;
+  }
+
+  .container {
+    width: 100%;
+    background-color: #f0f0f0;
+  }
+
+  .container__wrap {
+    max-width: 980px;
+    padding: 24px 0;
+    margin: 0 auto;
+  }
 }

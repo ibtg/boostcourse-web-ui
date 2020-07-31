@@ -5,8 +5,10 @@ li,
 h1,
 div,
 h2,
+h3,
 p,
 a,
+span,
 header,
 figure,
 button {
@@ -335,6 +337,78 @@ header {
   position: absolute;
   right: 25px;
   top: 25px;
+}
+
+/* notice */
+
+.notice__container {
+  padding: 20px 10px;
+}
+
+.notice__container h3 {
+  font-size: 16px;
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.notice {
+  padding-bottom: 20px;
+  /* margin-bottom: 32px; */
+  border-bottom: 1px #c1c1c1 solid;
+  display: flex;
+  flex-direction: column;
+}
+.notice__wrap {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: #333;
+}
+
+.notice__wrap p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.notice__wrap p > a {
+  color: #333;
+}
+
+.notice__wrap > a {
+  display: block;
+  width: 70px;
+  font-size: 14px;
+  color: #333;
+  display: block;
+}
+
+.creators {
+  margin-top: 20px;
+}
+
+.creators > a > span {
+  font-size: 14px;
+  color: #333;
+}
+.creators a:nth-child(2) {
+  padding-right: 6px;
+  border-right: 1px #c1c1c1 solid;
+}
+
+.partners {
+  margin-top: 20px;
+}
+
+.partners > a > span {
+  font-size: 14px;
+  color: #333;
+}
+
+.partners a:nth-child(2) {
+  padding-right: 6px;
+  border-right: 1px #c1c1c1 solid;
 }
 
 /* view */

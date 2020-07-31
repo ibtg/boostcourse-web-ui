@@ -36,28 +36,28 @@
       </nav>
     </header>
 
+
     <!-- article -->
     <article class="main__container">
       <div class="main__wrap">
-        <!-- banner -->
-        <section class="main__banner">
-          <div class="banner__image">
-            <img src="./image/banner_strawberry.png" alt="" />
-          </div>
-          <div class="banner__content clamp">
-            오븐 없이도 베이킹 가능! </br> 달콤 상큼 봄맞이 노오븐 딸기 케이크 만들기!
-          </div>
 
-            
-
-          <div class="banner__profile">
-              <div class="profile__divider"></div>
-              <div class="profile">
-                <div class="profile__image"></div>
-                <span class="profile__name" >FULLMOON</span>
-              </div>
+    <!-- banner -->
+    <section class="main__banner">
+      <div class="banner__image">
+        <img src="./image/banner_strawberry.png" alt="" />
+      </div>
+      <div class="banner__content clamp">
+        오븐 없이도 베이킹 가능! </br> 달콤 상큼 봄맞이 노오븐 딸기 케이크 만들기!
+      </div>
+      <div class="banner__profile">
+          <div class="profile__divider"></div>
+          <div class="profile">
+            <div class="profile__image"></div>
+            <span class="profile__name" >FULLMOON</span>
           </div>
-        </section>
+      </div>
+    </section>
+
 
         <!-- list -->
         <section class="main__list">
@@ -93,6 +93,43 @@
             </a>
           </div>
 
+        </section>
+
+        <!-- button -->
+        <button class="more__button">
+          <img class = "more__image"  src="./image/icon_arrow_more.png" alt="">
+          <span class="more__content">더보기</span>
+        </button>
+
+        <!-- form -->
+        <section class="form__container">
+          <h2>전하고 싶은 말을 남겨주세요</h2>
+          <p>답변을 원하시면 이메일을 꼭 적어주세요</p>
+
+          <form action="" class="form">
+              <label for="nickname" class="nickname__label">
+                닉네임
+              </label>
+              <input class="nickname__input" id="nickname" type="text" placeholder="NICKNAME">
+
+
+              <label for="email" class="email__label">
+                이메일
+              </label>
+              <div class="email__container">
+                <input class="email__input" id="email" type="text" placeholder="ID">
+                <span>@</span>
+                <select class="email__select" name="" id="">
+                  <option value="" selected>선택하세요</option>
+                </select>
+              </div>
+
+            <div class="form__content">
+              <textarea name="" id="" cols="30" rows="10" placeholder="전하고 싶은 말을 100자 이내로 적어주세요."></textarea>
+            </div>
+          
+            <button class="form__button">전송하기</button>
+          </form>
         </section>
       </div>
     </article>

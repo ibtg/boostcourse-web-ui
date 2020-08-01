@@ -811,7 +811,7 @@ footer {
     box-sizing: border-box;
     background: url('../image/bg_pencil.png') no-repeat;
     background-position: 50% 80%;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     background-color: #f4f5f7;
     max-width: 980px;
     margin: 0 auto;
@@ -824,7 +824,8 @@ footer {
     flex-direction: column;
     align-items: flex-start;
     /* margin-top: 28px; */
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
+    width: 50%;
   }
 
   .form__title > h2 {
@@ -843,7 +844,7 @@ footer {
     /* margin-top: 28px; */
     padding: 20px 50px 40px 50px;
     width: 590px;
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
     background-color: rgba(255, 255, 255, 0.9);
   }
 
@@ -865,6 +866,84 @@ footer {
 
 /* view */
 
+/* header */
+.view__header {
+  padding: 0 10px;
+  background-color: #fff;
+}
+
+/* navbar */
+
+.view__header .navbar {
+  width: 100%;
+  background-color: #fff;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.view__header .navbar .nav__logo {
+  display: block;
+  background: url('../image/logo_m.png') no-repeat 50%;
+  background-size: 96px 24px;
+  width: 114px;
+  height: 100%;
+}
+
+/* nav toggle */
+
+.view__header .toggle__checkbox {
+  position: absolute;
+  appearance: none;
+  display: none;
+}
+
+.view__header .toggle__checkbox:checked ~ .navbar__menu__list {
+  top: 50px;
+  width: 100%;
+  text-align: center;
+  height: 128px;
+  z-index: 10;
+  background-color: #fff;
+  margin-left: -10px;
+  padding: 10px 0;
+  box-sizing: border-box;
+}
+
+.view__header .toggle__label {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  cursor: pointer;
+  padding: 12px 8px;
+  box-sizing: border-box;
+  width: 46px;
+  height: 50px;
+}
+
+.view__header .toggle__image {
+  width: 100%;
+  height: 100%;
+}
+
+/* nav menu */
+.view__header .navbar__menu__list {
+  position: absolute;
+  height: 0px;
+  overflow: hidden;
+}
+
+.view__header .navbar__menu__list .navbar__menu__item {
+  height: 36px;
+  padding: 8px 12px;
+  box-sizing: border-box;
+  font-size: 18px;
+}
+
+.view__header .navbar__menu__list .navbar__menu__item > a {
+  color: #333;
+}
+
 /* container */
 
 .container__wrap {
@@ -877,6 +956,7 @@ footer {
 .cake__Wrap {
   padding-bottom: 24px;
   border-bottom: 1px #c1c1c1 solid;
+  /* margin: 0 15px; */
 }
 
 .cake__name {
@@ -1038,26 +1118,26 @@ footer {
 
 /* For above 768px */
 
-/* @media screen and (min-width: 768px) {
-  header {
+@media screen and (min-width: 768px) {
+  .view__header header {
     padding: 0 10px;
   }
 
-  .navbar__menu__item:last-child {
+  .view__header .navbar__menu__item:last-child {
     padding: 8px 12px;
     padding-right: 0;
   }
 
-  .toggle__label {
+  .view__header .toggle__label {
     display: none;
   }
-  .navbar__menu__list {
+  .view__header .navbar__menu__list {
     position: relative;
     height: 50px;
     width: 100%;
   }
 
-  .navbar__menu {
+  .view__header .navbar__menu {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -1066,36 +1146,36 @@ footer {
     height: 100%;
   }
 
-  .navbar__menu > li > a {
+  .view__header .navbar__menu > li > a {
     font-size: 18px;
     color: #333;
   }
-  .cake__info {
+  .view__header .cake__info {
     display: flex;
     justify-content: space-between;
   }
 
-  .images__item {
+  .view__header .images__item {
     max-width: 600px;
     margin: 0 auto;
     margin-bottom: 32px;
   }
-} */
+}
 
 /* For above 1024px */
 
-/* @media screen and (min-width: 1024px) {
-  header {
+@media screen and (min-width: 1024px) {
+  .view__header {
     max-width: 980px;
     margin: 0 auto;
   }
 
-  .navbar__menu__item:last-child {
+  .view__header .navbar__menu__item:last-child {
     padding: 8px 12px;
     padding-right: 0;
   }
 
-  .nav__logo {
+  .view__header .navbar .nav__logo {
     display: block;
     background: url('../image/logo_pc.png') no-repeat 50%;
     background-size: 96px 24px;
@@ -1104,23 +1184,33 @@ footer {
     height: 100%;
   }
 
-  .navbar__menu > li > a {
+  .view__header .navbar__menu > li > a {
     font-size: 22px;
     color: #333;
   }
 
-  .navbar__menu > li:hover {
+  .view__header .navbar__menu > li:hover {
     font-weight: bold;
   }
 
-  .container {
+  .view__header .container {
     width: 100%;
     background-color: #f0f0f0;
   }
 
-  .container__wrap {
+  .view__header .container__wrap {
     max-width: 980px;
     padding: 24px 0;
     margin: 0 auto;
   }
-} */
+
+  .container {
+    background-color: #f0f0f0;
+  }
+  .container__wrap {
+    max-width: 988px;
+    margin: 0 auto;
+    padding-right: 0;
+    padding-left: 0;
+  }
+}

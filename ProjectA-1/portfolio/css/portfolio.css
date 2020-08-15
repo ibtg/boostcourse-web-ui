@@ -1,8 +1,14 @@
 @charset "UTF-8";
 
+/* Global */
+
 body {
   font-family: '나눔 고딕', 'NanumGothic', '돋움', 'Dotum', 'sans-serif';
   margin: 0;
+}
+
+li {
+  list-style: none;
 }
 /* header */
 .title {
@@ -38,12 +44,12 @@ body {
 }
 
 .lists li {
-  list-style: none;
   flex: 1;
+  margin-left: 14px;
 }
 
-.lists li:first-child + li {
-  margin: 0 14px;
+.lists li:first-child {
+  margin: 0;
 }
 
 .lists li a {
@@ -92,7 +98,7 @@ body {
   font-weight: bold;
 }
 
-.element div {
+.element__content {
   padding: 30px;
   height: 12px;
   font-size: 12px;

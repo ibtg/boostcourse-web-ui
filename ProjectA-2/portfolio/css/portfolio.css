@@ -2,6 +2,17 @@
 
 /* Global */
 
+dl,
+dd,
+dt,
+ol,
+li,
+h1,
+h2,
+h3 {
+  padding: 0;
+  margin: 0;
+}
 body {
   font-family: '나눔 고딕', 'NanumGothic', '돋움', 'Dotum', 'sans-serif';
   margin: 0;
@@ -142,12 +153,12 @@ a {
 .table__childSize th {
   border: 1px #e4e4e4 solid;
   font-weight: bold;
-  padding: 8px;
+  padding: 8px 0;
 }
 
 .table__childSize td {
   border: 1px #e4e4e4 solid;
-  padding: 8px;
+  padding: 8px 0;
 }
 
 /* second stable */
@@ -179,7 +190,7 @@ a {
 
 .table__refund th:not(:first-child) {
   text-align: right;
-  padding: 8px 8px;
+  padding: 8px;
 }
 
 .table__refund th {
@@ -230,7 +241,6 @@ a {
   background-color: #fbfbfb;
   padding: 20px;
   border: 1px #e4e4e4 solid;
-  padding: 20px;
 }
 
 .info .info__title {
@@ -283,15 +293,14 @@ a {
 
 .gender__container .gender {
   margin-top: 8px;
-  display: flex;
   font-size: 12px;
   color: #000;
 }
 
-.gender > label:first-child {
+.gender__container .gender > label:first-child {
   margin-left: -2px;
 }
-.gender__container .gender > label:nth-child(2) {
+.gender__container .gender > label:last-child {
   margin-left: 48px;
 }
 
@@ -421,10 +430,12 @@ a {
   font-size: 14px;
   font-weight: bold;
   color: #000;
+  display: inline-block;
 }
 .definition__dictionary {
   font-size: 12px;
   color: #559bfa;
+  display: inline-block;
 }
 
 .definition {
@@ -503,19 +514,15 @@ a {
   text-decoration: underline;
 }
 
-.cookie__item:first-child {
-  font-weight: bold;
-}
-
-.cookie__item:first-child > span {
-  color: #559bfa;
-}
-
-.cookie__item .cookie__link {
+.cookie__word--blue {
   color: #559bfa;
 }
 
 .cookie__strong {
+  font-weight: bold;
+}
+
+.cookie__word--red {
   color: #ec5336;
   font-weight: normal;
 }
@@ -548,6 +555,11 @@ a {
 
 .news__article .news__imageLink {
   margin-right: 8px;
+}
+
+.news__article .news__imageLink .news__image {
+  width: 80px;
+  height: 80px;
 }
 
 /* news__article */
@@ -583,6 +595,11 @@ a {
 
 .webtoon {
   margin-bottom: 16px;
+}
+
+.webtoon .webtoon__image {
+  width: 285px;
+  height: 140px;
 }
 
 .webtoon .webtoon__link {

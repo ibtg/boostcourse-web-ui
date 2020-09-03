@@ -11,6 +11,11 @@ li {
   list-style: none;
 }
 /* header */
+
+.title__container {
+  background-color: #000;
+}
+
 .title {
   box-sizing: border-box;
   margin: 0 auto;
@@ -21,10 +26,6 @@ li {
   color: #fff;
   display: flex;
   align-items: center;
-  background-color: #000;
-}
-
-.title__container {
   background-color: #000;
 }
 

@@ -1,6 +1,17 @@
+@charset "UTF-8";
+
+/* Global */
+
+@font-face {
+  font-family: '나눔 고딕', 'NanumGothic', '돋움', 'Dotum', 'sans-serif';
+  src: local('나눔 고딕'), local('NanumGothic'), local('돋움'), local('Dotum'),
+    local('sans-serif');
+}
+
 html,
 body,
 h1,
+h3,
 p,
 ol,
 ul,
@@ -314,7 +325,7 @@ li {
 /* faq__lists */
 
 .faq__lists {
-  width: 900px;
+  width: 1080px;
 }
 
 .faq__lists .faq__item {
@@ -331,13 +342,12 @@ li {
 
 .questionArrow__container {
   display: flex;
-  padding: 20px 0;
 }
 
 .questionArrow__container .question__icon {
   background: url('../image/icon_question.gif') no-repeat 50% 5px;
   width: 30px;
-  margin: 0 12px;
+  margin: 20px 12px;
 }
 
 .questionArrow__container .question {
@@ -345,35 +355,46 @@ li {
   font-size: 20px;
   line-height: 28px;
   color: #1b1d21;
+  padding: 20px 0;
 }
 
-.questionArrow__container .arrow__icon {
+.questionArrow__container .arrow {
   background-color: #fff;
   border: none;
-  margin-top: -20px;
-  margin-bottom: -20px;
-  padding: 20px;
-}
-.questionArrow__container .arrow__icon .arrow__up {
-  background: url('../image/icon_arrow_up.gif') no-repeat 50% 50%;
-  width: 24px;
-  height: 20px;
+  width: 70px;
+  margin-left: 8px;
+  cursor: pointer;
+  background: url('../image/icon_arrow_down.gif') no-repeat 50% 50%;
 }
 
-.questionArrow__container .arrow__icon .arrow__down {
-  background: url('../image/icon_arrow_down.gif') no-repeat;
-  width: 24px;
-  height: 20px;
+.questionArrow__container .arrow .arrow__text::after {
+  content: '펼침';
+}
+
+.questionArrow__container .arrow.active {
+  background: url('../image/icon_arrow_up.gif') no-repeat 50% 50%;
+  background-color: #fff;
+  border: none;
+  width: 70px;
+  margin-left: 8px;
+  cursor: pointer;
+}
+
+.questionArrow__container .arrow.active > .arrow__text::after {
+  content: '닫힘';
 }
 
 /* answer__container */
 
 .answer__container {
+  display: none;
+}
+
+.answer__container.active {
   display: flex;
   padding: 20px 0;
   background-color: #f7f8fa;
 }
-
 .answer__container .answer__icon {
   background: url('../image/icon_answer.gif') no-repeat 50% 5px;
   width: 30px;

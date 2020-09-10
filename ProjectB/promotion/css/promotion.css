@@ -2,12 +2,6 @@
 
 /* Global */
 
-@font-face {
-  font-family: '나눔 고딕', 'NanumGothic', '돋움', 'Dotum', 'sans-serif';
-  src: local('나눔 고딕'), local('NanumGothic'), local('돋움'), local('Dotum'),
-    local('sans-serif');
-}
-
 html,
 body,
 h1,
@@ -20,6 +14,10 @@ span,
 a {
   margin: 0;
   padding: 0;
+}
+
+* {
+  font-family: '나눔 고딕', 'NanumGothic', '돋움', 'Dotum', 'sans-serif';
 }
 
 a {
@@ -49,23 +47,24 @@ li {
 .header__img {
   position: fixed;
   background-color: rgba(64, 64, 64, 0.75);
-  height: 44px;
+  height: 66px;
   width: 100%;
-  display: flex;
-  align-items: center;
   z-index: 10;
-  padding: 12px 0;
 }
 
-.header__img a {
-  position: absolute;
+.header__img .header__logo {
+  position: relative;
   left: 100px;
+  display: block;
+  background: url('../image/logo.png') no-repeat 50% 50%;
+  width: 120px;
+  height: 66px;
 }
 
 /* invite */
 
 .invite {
-  background: #fff;
+  background-color: #fff;
   width: 100%;
 }
 
@@ -77,16 +76,10 @@ li {
   margin: 0 auto;
 }
 
-.invite__contents {
-  position: absolute;
-  top: 400px;
-  left: 600px;
-}
-
 /* creater */
 
 .creator {
-  background: #f9939d;
+  background-color: #f9939d;
   width: 100%;
 }
 
@@ -97,16 +90,10 @@ li {
   background: url('../image/section_creator.jpg') no-repeat center;
 }
 
-.creator__contents {
-  position: absolute;
-  top: 400px;
-  left: 500px;
-}
-
 /* store */
 
 .store {
-  background: #d5e43f;
+  background-color: #d5e43f;
   width: 100%;
 }
 
@@ -116,12 +103,6 @@ li {
   max-width: 1920px;
   background: url('../image/section_store.jpg') no-repeat center;
   margin: 0 auto;
-}
-
-.store__contents {
-  position: absolute;
-  top: 200px;
-  left: 500px;
 }
 
 .store__lists {
@@ -140,22 +121,12 @@ li {
   width: 980px;
 }
 
-.lists__items > li:not(:nth-child(4n-3)) {
+.lists__items > .lists__item:not(:nth-child(4n-3)) {
   padding-left: 20px;
   box-sizing: border-box;
 }
 
-.lists__items li img {
-  position: relative;
-  display: block;
-  border-radius: 10px;
-}
-
-.list__items .item__discount {
-  position: absolute;
-}
-
-.lists__items .item__info {
+.lists__item .item__info {
   display: flex;
   flex-direction: column;
   height: 140px;
@@ -164,53 +135,22 @@ li {
   align-items: center;
 }
 
-/* store - item__info */
-
-.item__info .item__title {
-  font-size: 20px;
-  color: #1b1d21;
-}
-
-.item__info .item__price .price {
-  font-size: 28px;
-
-  color: #1b1d21;
-}
-
-.item__info .item__price .unit {
-  font-size: 20px;
-  color: #1b1d21;
-}
-
-.item__info .item__title.clamp {
-  padding: 0 10px;
-  width: inherit;
-  overflow: hidden;
-  box-sizing: border-box;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-.item__image {
+.item__imageContainer {
+  width: 230px;
+  height: 230px;
   position: relative;
+  display: block;
 }
 
-.item__image .item__discount .discount__ratio {
-  font-size: 65px;
-  color: #fff;
+.item__imageContainer .item__image {
+  position: absolute;
+  border-radius: 10px;
 }
 
-.item__image .item__discount .discount__time {
-  font-size: 20px;
-  color: #fff;
-}
-
-.item__image .item__discount {
+.item__discount {
   position: absolute;
   border-radius: 10px;
   opacity: 0;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
   background-color: rgba(96, 132, 2, 0.9);
@@ -220,8 +160,42 @@ li {
   align-items: center;
 }
 
-.item__image:hover .item__discount {
+.item__imageContainer:hover .item__discount {
   opacity: 1;
+}
+.item__imageContainer .item__discount .discount__ratio {
+  font-size: 65px;
+  color: #fff;
+}
+
+.item__imageContainer .item__discount .discount__time {
+  font-size: 20px;
+  color: #fff;
+}
+
+/* store - item__info */
+
+.item__info {
+  color: #1b1d21;
+}
+
+.item__info .item__title {
+  font-size: 20px;
+  overflow: hidden;
+  box-sizing: border-box;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding: 0 10px;
+  width: inherit;
+  text-align: center;
+}
+
+.item__info .item__price .price {
+  font-size: 28px;
+}
+
+.item__info .item__price .unit {
+  font-size: 20px;
 }
 
 /* recipe */
@@ -229,7 +203,6 @@ li {
 .recipe__container {
   position: relative;
   height: 1030px;
-  background: url('../image/pattern_recipe.png') repeat-x center;
   background-color: #b893f9;
 }
 
@@ -241,6 +214,7 @@ li {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background: url('../image/pattern_recipe.png') repeat-x center;
 }
 
 /* recipe - recipe__images */
@@ -256,19 +230,10 @@ li {
   width: 480px;
   height: 482px;
   display: inline-block;
-}
-.recipe__images .recipe > a {
-  display: inline-block;
-  width: inherit;
-  height: inherit;
-}
-
-.recipe__images .cake {
   margin-top: 200px;
 }
 
 .recipe__images .tart {
-  margin-top: 200px;
   margin-left: 14px;
 }
 
@@ -278,32 +243,18 @@ li {
   margin: 40px auto;
   width: 310px;
   height: 91px;
-  background: url('../image/go_recipe.gif');
+  background-image: url('../image/go_recipe.gif');
 }
 
 .recipe__buttons:hover {
-  background: url('../image/go_recipe_over.gif');
-}
-
-/* recipe__buttons */
-
-.recipe__buttons {
-  display: block;
-  margin: 40px auto;
-  width: 310px;
-  height: 91px;
-  background: url('../image/go_recipe.gif');
-}
-
-.recipe__buttons:hover {
-  background: url('../image/go_recipe_over.gif');
+  background-image: url('../image/go_recipe_over.gif');
 }
 
 /* faq */
 
 .faq {
   width: 100%;
-  background: #fff;
+  background-color: #fff;
 }
 
 .faq__container {
@@ -329,8 +280,6 @@ li {
 }
 
 .faq__lists .faq__item {
-  display: flex;
-  flex-direction: column;
   border-bottom: 1px #a1a5ad solid;
 }
 
@@ -356,6 +305,7 @@ li {
   line-height: 28px;
   color: #1b1d21;
   padding: 20px 0;
+  font-weight: bold;
 }
 
 .questionArrow__container .arrow {
@@ -367,43 +317,33 @@ li {
   background: url('../image/icon_arrow_down.gif') no-repeat 50% 50%;
 }
 
-.questionArrow__container .arrow .arrow__text::after {
-  content: '펼침';
-}
-
 .questionArrow__container .arrow.active {
   background: url('../image/icon_arrow_up.gif') no-repeat 50% 50%;
-  background-color: #fff;
-  border: none;
-  width: 70px;
-  margin-left: 8px;
-  cursor: pointer;
-}
-
-.questionArrow__container .arrow.active > .arrow__text::after {
-  content: '닫힘';
 }
 
 /* answer__container */
 
 .answer__container {
   display: none;
+  padding: 20px 0;
+  background-color: #f7f8fa;
 }
 
 .answer__container.active {
   display: flex;
-  padding: 20px 0;
-  background-color: #f7f8fa;
 }
 .answer__container .answer__icon {
   background: url('../image/icon_answer.gif') no-repeat 50% 5px;
   width: 30px;
+  height: 30px;
   margin: 0 12px;
+  display: inline-block;
 }
 .answer__container .answer__content {
   font-size: 16px;
   color: #60656e;
   line-height: 28px;
+  display: inline-block;
 }
 
 /* footer */
@@ -423,7 +363,7 @@ footer {
   height: 100%;
 }
 
-.footer__content > strong {
+.footer__content .footer__text {
   margin: 0 4px;
 }
 

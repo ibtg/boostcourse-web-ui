@@ -1,36 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>view</title>
     <link rel="stylesheet" href="./css/foodwith.css" />
   </head>
   <body>
     <!-- header -->
-    <header class="view__header">
+    <header class="header">
       <nav class="navbar">
         <!-- nav logo -->
-        <a href="" class="nav__logo"
-          ><span class="blind">food with 로고</span></a
-        >
-        <!-- nav toggle -->
-        <input
-          type="checkbox"
-          name="toggle"
-          id="toggle"
-          class="toggle__checkbox"
-        />
-        <label for="toggle" class="toggle__label">
+        <a href="" class="nav__logo">
+          <span class="blind">food with</span>
+        </a>
+        <button class="toggle__button">
           <img src="./image/icon_menu.png" class="toggle__image" alt="" />
-        </label>
+        </button>
 
         <!-- nav menu -->
         <div class="navbar__menu__list">
           <ul class="navbar__menu">
-            <li class="navbar__menu__item"><a href="">About</a></li>
-            <li class="navbar__menu__item"><a href="">Work</a></li>
-            <li class="navbar__menu__item"><a href="">Contact</a></li>
+            <li class="navbar__menu__item">
+              <a href="" class="item__link">About</a>
+            </li>
+            <li class="navbar__menu__item">
+              <a href="" class="item__link">Work</a>
+            </li>
+            <li class="navbar__menu__item">
+              <a href="" class="item__link">Contact</a>
+            </li>
           </ul>
         </div>
       </nav>
@@ -41,25 +39,25 @@
       <div class="container__wrap">
         <!-- section name -->
         <section class="cake__Wrap">
-          <h1 class="cake__name">딸기 케이크</h1>
+          <h2 class="cake__name">딸기 케이크</h2>
           <div class="cake__info">
             <div class="cake__items">
               <div class="cake__item">
-                <div>CHEF</div>
-                <div>FULLMOON</div>
+                <div class="category__title">CHEF</div>
+                <div class="category__name">FULLMOON</div>
               </div>
               <div class="cake__item">
-                <div>CATEGORY</div>
-                <div>디저트</div>
+                <div class="category__title">CATEGORY</div>
+                <div class="category__name">디저트</div>
               </div>
             </div>
             <div class="cake__items">
               <div class="cake__item">
-                <div>DATE</div>
+                <div class="category__title">DATE</div>
                 <div class="info__number">2018.02.02</div>
               </div>
               <div class="cake__item">
-                <div>VIEW</div>
+                <div class="category__title">VIEW</div>
                 <div class="info__number">2,356</div>
               </div>
             </div>
@@ -79,8 +77,8 @@
                 class="food__link"
                 href="http://terms.naver.com"
                 target="_blank"
-                >https://terms.naver.com</a
-              >
+                >https://terms.naver.com
+              </a>
             </p>
           </div>
 
@@ -97,25 +95,33 @@
           <div class="recipe__info">
             <h2 class="info__title">만드는 법</h2>
             <ol class="info__contents">
-              <li>밀가루, 달걀, 물을 볼에 넣고 잘 섞어준다.</li>
-              <li>
+              <li class="info__item">
+                밀가루, 달걀, 물을 볼에 넣고 잘 섞어준다.
+              </li>
+              <li class="info__item">
                 냄비에 반죽을 넣고 약한 불에서 20분간 익혀준다. 잔열로 5분간 더
                 익혀준다. 다 익었으면 꺼낸 뒤 한 김 식힌다.
               </li>
-              <li>크림치즈 200g을 부드럽게 풀고 설탕 70g을 넣고 섞는다.</li>
-              <li>
+              <li class="info__item">
+                크림치즈 200g을 부드럽게 풀고 설탕 70g을 넣고 섞는다.
+              </li>
+              <li class="info__item">
                 케이크 시트를 3등분하여 1개를 밑에 깔고 설탕시럽을 바른다.
               </li>
-              <li>
+              <li class="info__item">
                 반으로 자른 딸기를 올려준 뒤, 만들었던 치즈크림을 딸기가 덮어질
                 정도로 채운다.
               </li>
-              <li>다시 케이크 시트를 올리고 설탕 시럽을 바른다.</li>
-              <li>
+              <li class="info__item">
+                다시 케이크 시트를 올리고 설탕 시럽을 바른다.
+              </li>
+              <li class="info__item">
                 시트 위에 생크림을 얇고 평평히 발라준 뒤 크림이 굳을 수 있게
                 냉장실에 3시간 정도 넣어준다.
               </li>
-              <li>케이크가 굳었으면 딸기를 올려 장식해준다.</li>
+              <li class="info__item">
+                케이크가 굳었으면 딸기를 올려 장식해준다.
+              </li>
             </ol>
           </div>
 
@@ -135,7 +141,7 @@
               <tr>
                 <td>재료준비</td>
                 <td>밀가루, 계란, 물로 반죽 만들기</td>
-                <td>dd</td>
+                <td></td>
               </tr>
               <tr>
                 <td>20min</td>
@@ -173,8 +179,9 @@
         </section>
       </div>
     </article>
+
     <!-- footer -->
-    <footer>
+    <footer class="footer">
       <div class="contact__contaier">
         <div class="contact">
           <span>회사소개</span>
@@ -182,7 +189,9 @@
           <span>이용약관</span>
           <span>고객센터</span>
         </div>
-        <div class="copyright">© <span>foodwith</span> All Right Reserved.</div>
+        <div class="copyright">
+          © <span class="componay">foodwith</span> All Right Reserved.
+        </div>
       </div>
     </footer>
   </body>

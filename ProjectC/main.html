@@ -1,124 +1,147 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>[프로젝트C] 푸드위드 - 반응형 웹페이지 만들기 - main</title>
     <link rel="stylesheet" href="css/foodwith.css" />
   </head>
   <body>
     <!-- header -->
-    <header>
+    <header class="header">
       <nav class="navbar">
         <!-- nav logo -->
-        <a href="" class="nav__logo"
-          ><span class="blind">food with 로고</span></a
-        >
-        <!-- nav toggle -->
-        <input
-          type="checkbox"
-          name="toggle"
-          id="toggle"
-          class="toggle__checkbox"
-        />
-        <label for="toggle" class="toggle__label">
+        <a href="" class="nav__logo">
+          <span class="blind">food with</span>
+        </a>
+        <button class="toggle__button">
           <img src="./image/icon_menu.png" class="toggle__image" alt="" />
-        </label>
+        </button>
 
         <!-- nav menu -->
         <div class="navbar__menu__list">
           <ul class="navbar__menu">
-            <li class="navbar__menu__item"><a href="">About</a></li>
-            <li class="navbar__menu__item"><a href="">Work</a></li>
-            <li class="navbar__menu__item"><a href="">Contact</a></li>
+            <li class="navbar__menu__item">
+              <a href="" class="item__link">About</a>
+            </li>
+            <li class="navbar__menu__item">
+              <a href="" class="item__link">Work</a>
+            </li>
+            <li class="navbar__menu__item">
+              <a href="" class="item__link">Contact</a>
+            </li>
           </ul>
         </div>
       </nav>
     </header>
 
     <!-- article -->
-    <article class="main__container">
+    <div class="main__container">
       <div class="main__wrap">
         <!-- banner -->
-        <section class="main__banner">
+        <div class="main__banner">
           <a class="main__bannerWrap" href="">
-            <div class="banner__image">
-              <img src="./image/banner_strawberry.png" alt="" />
-            </div>
+            <img
+              class="banner__image"
+              src="./image/banner_strawberry.png"
+              alt=""
+            />
             <div class="banner__contentProfile">
-              <div class="banner__content">
-                <p>
-                  오븐 없이도 베이킹 가능! 달콤 상큼 봄맞이 노오븐 딸기 케이크
-                  만들기!
-                </p>
-              </div>
+              <p class="banner__content">
+                오븐 없이도 베이킹 가능! 달콤 상큼 봄맞이 노오븐 딸기 케이크
+                만들기!
+              </p>
               <div class="banner__profile">
                 <div class="profile__divider"></div>
                 <div class="profile">
-                  <div class="profile__image"></div>
+                  <div class="profile__image-none">
+                    <img
+                      class="profile__image"
+                      src="./image/thumbnail_profile.jpg"
+                      alt=""
+                    />
+                  </div>
                   <span class="profile__name">FULLMOON</span>
                 </div>
               </div>
             </div>
           </a>
-        </section>
+        </div>
 
         <!-- list -->
-        <section class="main__list">
+        <div class="main__list">
           <div class="list__wrap">
-            <a href="" class="list__item">
-              <img
-                class="list__image"
-                src="/image/thumbnail_pumpkin.jpg"
-                alt=""
-              />
-              <div class="list__content">
-                따뜻 담백 호박! 든든한 호박죽으로 한끼 해결하기
-              </div>
-            </a>
+            <ul class="list__items">
+              <li class="list__item">
+                <a href="" class="list__link">
+                  <img
+                    class="list__image"
+                    src="./image/thumbnail_pumpkin.jpg"
+                    alt="호박"
+                  />
+                  <p class="list__content">
+                    따뜻 담백 호박! 든든한 호박죽으로 한끼 해결하기
+                  </p>
+                </a>
+              </li>
 
-            <a href="" class="list__item">
-              <img class="list__image" src="/image/thumbnail_lime.jpg" alt="" />
-              <div class="list__content">상큼한 라임청 담기</div>
-            </a>
+              <li class="list__item">
+                <a href="" class="list__link">
+                  <img
+                    class="list__image"
+                    src="./image/thumbnail_lime.jpg"
+                    alt="라임청"
+                  />
+                  <p class="list__content">상큼한 라임청 담기</p>
+                </a>
+              </li>
 
-            <a href="" class="list__item">
-              <img
-                class="list__image"
-                src="/image/thumbnail_paprika.jpg"
-                alt=""
-              />
-              <div class="list__content">아삭아삭 빨간 피망 볶음 레시피</div>
-            </a>
+              <li class="list__item">
+                <a href="" class="list__link">
+                  <img
+                    class="list__image"
+                    src="./image/thumbnail_paprika.jpg"
+                    alt="피망"
+                  />
+                  <p class="list__content">아삭아삭 빨간 피망 볶음 레시피</p>
+                </a>
+              </li>
 
-            <a href="" class="list__item">
-              <img
-                class="list__image"
-                src="/image/thumbnail_garlic.jpg"
-                alt=""
-              />
-              <div class="list__content">바삭바삭 마늘빵 만들기</div>
-            </a>
+              <li class="list__item">
+                <a href="" class="list__link">
+                  <img
+                    class="list__image"
+                    src="./image/thumbnail_garlic.jpg"
+                    alt=""
+                  />
+                  <p class="list__content">바삭바삭 마늘빵 만들기</p>
+                </a>
+              </li>
 
-            <a href="" class="list__item">
-              <img
-                class="list__image"
-                src="/image/thumbnail_onion.jpg"
-                alt=""
-              />
-              <div class="list__content">자색 빛깔 적양파 피클 담기</div>
-            </a>
+              <li class="list__item">
+                <a href="" class="list__link">
+                  <img
+                    class="list__image"
+                    src="./image/thumbnail_onion.jpg"
+                    alt=""
+                  />
+                  <p class="list__content">자색 빛깔 적양파 피클 담기</p>
+                </a>
+              </li>
 
-            <a href="" class="list__item">
-              <img
-                class="list__image"
-                src="/image/thumbnail_avocado.jpg"
-                alt=""
-              />
-              <div class="list__content">건강한 아보카도 샌드위치 만들기</div>
-            </a>
+              <li class="list__item">
+                <a href="" class="list__link">
+                  <img
+                    class="list__image"
+                    src="./image/thumbnail_avocado.jpg"
+                    alt=""
+                  />
+                  <p class="list__content">건강한 아보카도 샌드위치 만들기</p>
+                </a>
+              </li>
+            </ul>
           </div>
-        </section>
+        </div>
 
         <!-- button -->
         <div class="more__btnContaier">
@@ -131,97 +154,92 @@
         <!-- form -->
         <section class="form__container">
           <div class="form__wraper">
+            <div class="form__contents">
+              <h2 class="form__title">전하고 싶은 말을 남겨주세요</h2>
+              <span class="form__subtitle"
+                >답변을 원하시면 이메일을 꼭 적어주세요</span
+              >
+            </div>
 
-          
-          <div class="form__title">
-            <h2>전하고 싶은 말을 남겨주세요</h2>
-            <p>답변을 원하시면 이메일을 꼭 적어주세요</p>
-          </div>
-
-          <form action="" class="form">
-            <!-- nickname -->
-            <label for="nickname" class="nickname__label">
-              닉네임
-            </label>
-            <input
-              class="nickname__input"
-              id="nickname"
-              type="text"
-              placeholder="NICKNAME"
-            />
-
-            <!-- email -->
-            <label for="email" class="email__label">
-              이메일
-            </label>
-            <div class="email__container">
+            <form action="/" class="form">
+              <!-- nickname -->
+              <label for="nickname" class="nickname__label"> 닉네임 </label>
               <input
-                class="email__input"
-                id="email"
+                class="nickname__input"
+                id="nickname"
                 type="text"
-                placeholder="ID"
+                placeholder="NICKNAME"
               />
-              <span>@</span>
-              <select class="email__select" name="" id="">
-                <option value="" selected>선택하세요</option>
-              </select>
-            </div>
 
-            <!-- form content -->
-            <div class="form__content">
-              <textarea
-                name=""
-                id=""
-                cols="30"
-                rows="10"
-                placeholder="전하고 싶은 말을 100자 이내로 적어주세요."
-              ></textarea>
-            </div>
+              <!-- email -->
+              <label for="email" class="email__label"> 이메일 </label>
+              <div class="email__container">
+                <input
+                  class="email__input"
+                  id="email"
+                  type="text"
+                  placeholder="ID"
+                />
+                <span>@</span>
+                <select class="email__select">
+                  <option selected>선택하세요</option>
+                </select>
+              </div>
 
-            <button class="form__button">전송하기</button>
+              <!-- form content -->
+              <div class="form__content">
+                <textarea
+                  class="form__textarea"
+                  cols="30"
+                  rows="10"
+                  placeholder="전하고 싶은 말을 100자 이내로 적어주세요."
+                ></textarea>
+              </div>
+
+              <button class="form__button">전송하기</button>
+            </form>
           </div>
-          </form>
         </section>
 
         <!-- notice  -->
         <section class="notice__container">
           <div class="notice">
-            <a href=""><h3>공지사항</h3></a>
+            <a href="" class="notice__title">공지사항</a>
             <div class="notice__wrap">
-              <p>
-                <a href=""
-                  >다양한 소식을 담은 foodwith! 정식 오픈을 안내드립니다.</a
-                >
-              </p>
-              <a href="">더보기</a>
+              <a href="" class="notice__link notice__subtitle"
+                >다양한 소식을 담은 foodwith! 정식 오픈을 안내드립니다.</a
+              >
+              <a href="" class="notice__link notice__more">더보기</a>
             </div>
           </div>
 
-          <div class="creators">
-            <h3>Creators</h3>
-            <a href=""><span>푸드 크리에이터</span></a>
-            <a href=""><span>푸드 비즈니스</span></a>
+          <div class="notice__Info">
+            <h3 class="Info__title">Creators</h3>
+            <a href="" class="notice__link">푸드 크리에이터</a>
+            <a href="" class="notice__link">푸드 비즈니스</a>
           </div>
 
-          <div class="partners">
-            <h3>Partners</h3>
-            <a href=""><span>푸드 파트너</span></a>
-            <a href=""><span>푸드 스토어</span></a>
+          <div class="notice__Info">
+            <h3 class="Info__title">Partners</h3>
+            <a href="" class="notice__link">푸드 파트너</a>
+            <a href="" class="notice__link">푸드 스토어</a>
           </div>
         </section>
       </div>
-    </article>
+    </div>
 
     <!-- footer -->
-    <footer>
+    <footer class="footer">
       <div class="contact__contaier">
         <div class="contact">
-          <span>회사소개</span>
-          <span>인재채용</span>
-          <span>이용약관</span>
-          <span>고객센터</span>
+          <a href="" class="notice__link">회사소개</a>
+          <a href="" class="notice__link">인재채용</a>
+          <a href="" class="notice__link">이용약관</a>
+          <a href="" class="notice__link">고객센터</a>
         </div>
-        <div class="copyright">© <span>foodwith</span> All Right Reserved.</div>
+        <div class="contact__right">
+          © <span class="copyright">foodwith</span> All Right Reserved.
+        </div>
       </div>
     </footer>
   </body>

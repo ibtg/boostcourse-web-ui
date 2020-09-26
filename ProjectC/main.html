@@ -15,7 +15,7 @@
           <span class="blind">food with</span>
         </a>
         <button class="toggle__button">
-          <img src="./image/icon_menu.png" class="toggle__image" alt="" />
+          <span class="blind">hamburger</span>
         </button>
 
         <!-- nav menu -->
@@ -35,7 +35,7 @@
       </nav>
     </header>
 
-    <!-- article -->
+    <!-- container -->
     <div class="main__container">
       <div class="main__wrap">
         <!-- banner -->
@@ -47,13 +47,12 @@
               alt=""
             />
             <div class="banner__contentProfile">
-              <p class="banner__content">
+              <span class="banner__content">
                 오븐 없이도 베이킹 가능! 달콤 상큼 봄맞이 노오븐 딸기 케이크
                 만들기!
-              </p>
+              </span>
               <div class="banner__profile">
-                <div class="profile__divider"></div>
-                <div class="profile">
+                <div class="banner__profileInfo">
                   <div class="profile__image-none">
                     <img
                       class="profile__image"
@@ -61,7 +60,7 @@
                       alt=""
                     />
                   </div>
-                  <span class="profile__name">FULLMOON</span>
+                  <div class="profile__name">FULLMOON</div>
                 </div>
               </div>
             </div>
@@ -74,68 +73,81 @@
             <ul class="list__items">
               <li class="list__item">
                 <a href="" class="list__link">
-                  <img
-                    class="list__image"
-                    src="./image/thumbnail_pumpkin.jpg"
-                    alt="호박"
-                  />
+                  <div class="image__wrap">
+                    <img
+                      class="list__image"
+                      src="./image/thumbnail_pumpkin.jpg"
+                      alt="호박"
+                    />
+                  </div>
+
                   <p class="list__content">
                     따뜻 담백 호박! 든든한 호박죽으로 한끼 해결하기
                   </p>
                 </a>
               </li>
 
-              <li class="list__item">
+              <li class="list__item list__center">
                 <a href="" class="list__link">
-                  <img
-                    class="list__image"
-                    src="./image/thumbnail_lime.jpg"
-                    alt="라임청"
-                  />
+                  <div class="image__wrap">
+                    <img
+                      class="list__image"
+                      src="./image/thumbnail_lime.jpg"
+                      alt="라임청"
+                    />
+                  </div>
                   <p class="list__content">상큼한 라임청 담기</p>
                 </a>
               </li>
 
               <li class="list__item">
                 <a href="" class="list__link">
-                  <img
-                    class="list__image"
-                    src="./image/thumbnail_paprika.jpg"
-                    alt="피망"
-                  />
+                  <div class="image__wrap">
+                    <img
+                      class="list__image"
+                      src="./image/thumbnail_paprika.jpg"
+                      alt="피망"
+                    />
+                  </div>
                   <p class="list__content">아삭아삭 빨간 피망 볶음 레시피</p>
                 </a>
               </li>
 
               <li class="list__item">
                 <a href="" class="list__link">
-                  <img
-                    class="list__image"
-                    src="./image/thumbnail_garlic.jpg"
-                    alt=""
-                  />
+                  <div class="image__wrap">
+                    <img
+                      class="list__image"
+                      src="./image/thumbnail_garlic.jpg"
+                      alt=""
+                    />
+                  </div>
                   <p class="list__content">바삭바삭 마늘빵 만들기</p>
                 </a>
               </li>
 
-              <li class="list__item">
+              <li class="list__item list__center">
                 <a href="" class="list__link">
-                  <img
-                    class="list__image"
-                    src="./image/thumbnail_onion.jpg"
-                    alt=""
-                  />
+                  <div class="image__wrap">
+                    <img
+                      class="list__image"
+                      src="./image/thumbnail_onion.jpg"
+                      alt=""
+                    />
+                  </div>
                   <p class="list__content">자색 빛깔 적양파 피클 담기</p>
                 </a>
               </li>
 
               <li class="list__item">
                 <a href="" class="list__link">
-                  <img
-                    class="list__image"
-                    src="./image/thumbnail_avocado.jpg"
-                    alt=""
-                  />
+                  <div class="image__wrap">
+                    <img
+                      class="list__image"
+                      src="./image/thumbnail_avocado.jpg"
+                      alt=""
+                    />
+                  </div>
                   <p class="list__content">건강한 아보카도 샌드위치 만들기</p>
                 </a>
               </li>
@@ -145,8 +157,8 @@
 
         <!-- button -->
         <div class="more__btnContaier">
-          <button class="more__button">
-            <img class="more__image" src="./image/icon_arrow_more.png" alt="" />
+          <button class="more__button" type="button">
+            <span class="more__buttonIcon"></span>
             <span class="more__content">더보기</span>
           </button>
         </div>
@@ -155,7 +167,7 @@
         <section class="form__container">
           <div class="form__wraper">
             <div class="form__contents">
-              <h2 class="form__title">전하고 싶은 말을 남겨주세요</h2>
+              <span class="form__title">전하고 싶은 말을 남겨주세요</span>
               <span class="form__subtitle"
                 >답변을 원하시면 이메일을 꼭 적어주세요</span
               >
@@ -177,7 +189,7 @@
                 <input
                   class="email__input"
                   id="email"
-                  type="text"
+                  type="email"
                   placeholder="ID"
                 />
                 <span>@</span>
@@ -206,23 +218,27 @@
           <div class="notice">
             <a href="" class="notice__title">공지사항</a>
             <div class="notice__wrap">
-              <a href="" class="notice__link notice__subtitle"
-                >다양한 소식을 담은 foodwith! 정식 오픈을 안내드립니다.</a
-              >
+              <a href="" class="notice__link notice__subtitle">
+                다양한 소식을 담은 foodwith! 정식 오픈을 안내드립니다.
+              </a>
               <a href="" class="notice__link notice__more">더보기</a>
             </div>
           </div>
 
           <div class="notice__Info">
-            <h3 class="Info__title">Creators</h3>
-            <a href="" class="notice__link">푸드 크리에이터</a>
-            <a href="" class="notice__link">푸드 비즈니스</a>
+            <span class="notice__title">Creators</span>
+            <div class="notice__menu">
+              <a href="" class="notice__link notice__first">푸드 크리에이터</a>
+              <a href="" class="notice__link">푸드 비즈니스</a>
+            </div>
           </div>
 
           <div class="notice__Info">
-            <h3 class="Info__title">Partners</h3>
-            <a href="" class="notice__link">푸드 파트너</a>
-            <a href="" class="notice__link">푸드 스토어</a>
+            <span class="notice__title">Partners</span>
+            <div class="notice__menu">
+              <a href="" class="notice__link notice__first">푸드 파트너</a>
+              <a href="" class="notice__link">푸드 스토어</a>
+            </div>
           </div>
         </section>
       </div>
@@ -237,8 +253,8 @@
           <a href="" class="notice__link">이용약관</a>
           <a href="" class="notice__link">고객센터</a>
         </div>
-        <div class="contact__right">
-          © <span class="copyright">foodwith</span> All Right Reserved.
+        <div class="copyright">
+          © <span class="componay">foodwith</span> All Right Reserved.
         </div>
       </div>
     </footer>

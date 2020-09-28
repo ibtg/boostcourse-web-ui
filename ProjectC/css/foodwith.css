@@ -216,8 +216,6 @@ button {
 
 .list__link {
   display: block;
-  /* width: 100%;
-  height: 100%; */
 }
 
 .image__wrap {
@@ -226,9 +224,7 @@ button {
 
 .list__image {
   width: 100%;
-  /* height: 100%; */
   display: block;
-  /* box-sizing: border-box; */
 }
 
 .image__wrap::after {
@@ -281,17 +277,11 @@ button {
 /* form */
 
 .form__wraper {
-  /* display: flex;
-  flex-direction: column;
-  align-items: center; */
   background-color: #f4f5f7;
   padding: 20px 15px 25px 15px;
 }
 
 .form__wraper .form__contents {
-  /* display: flex;
-  flex-direction: column;
-  align-items: center; */
   text-align: center;
 }
 
@@ -370,10 +360,6 @@ button {
   background-position: right;
   background-size: 20px 12px;
 }
-
-/* .form__content {
-  width: 100%;
-} */
 
 .form__content .form__textarea {
   width: 100%;
@@ -556,16 +542,6 @@ button {
     float: left;
     margin: 0;
   }
-  /* 
-  .list__items .list__item:nth-child(2n + 1) {
-    padding-right: 10px;
-    box-sizing: border-box;
-  }
-
-  .list__items .list__item:nth-child(2n + 2) {
-    padding-left: 10px;
-    box-sizing: border-box;
-  } */
 
   .list__item .list__content {
     font-size: 18px;
@@ -692,14 +668,7 @@ button {
     padding: 0;
   }
 
-  /* .list__items .list__item:nth-child(2n + 1),
-  .list__items .list__item:nth-child(2n + 2) {
-    padding: 20px 0 0 20px;
-    box-sizing: content-box;
-  } */
-
   .list__item {
-    /* padding: 20px 0 0 20px; */
     padding: 20px 0 0 0;
     padding-top: 20px;
     box-sizing: content-box;
@@ -711,14 +680,6 @@ button {
   .list__item.list__center {
     padding: 20px 20px 0 20px;
   }
-
-  /* .list__items .list__item:nth-child(3n + 1) {
-    padding-left: 0px;
-  } */
-
-  /* .list__item.list__content {
-    padding: 20px;
-  } */
 
   .list__link {
     position: relative;
@@ -811,8 +772,11 @@ button {
 
 /* container */
 
-.container__wrap {
+.container {
   background-color: #f0f0f0;
+}
+
+.container__wrap {
   padding: 24px 15px;
 }
 
@@ -971,9 +935,6 @@ button {
 /* For above 1024px */
 
 @media screen and (min-width: 1024px) {
-  .container {
-    background-color: #f0f0f0;
-  }
   .container__wrap {
     max-width: 988px;
     margin: 0 auto;

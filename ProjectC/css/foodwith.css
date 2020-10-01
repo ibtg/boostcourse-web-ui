@@ -65,7 +65,7 @@ button {
 .navbar .nav__logo {
   display: inline-block;
   background: url('../image/logo_m.png') no-repeat 50%;
-  background-size: 84px 16px;
+  background-size: 84px 19px;
   width: 114px;
   height: 100%;
 }
@@ -132,9 +132,6 @@ button {
 /* banner */
 .main__banner {
   background-color: #ffee02;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 .banner__contentProfile {
@@ -278,7 +275,7 @@ button {
 
 .form__wraper {
   background-color: #f4f5f7;
-  padding: 20px 15px 25px 15px;
+  padding: 20px 15px 25px;
 }
 
 .form__wraper .form__contents {
@@ -358,7 +355,7 @@ button {
   appearance: none;
   background: url('../image/icon_arrow_email.png') no-repeat;
   background-position: right;
-  background-size: 20px 12px;
+  background-size: 10px 6px;
 }
 
 .form__content .form__textarea {
@@ -388,8 +385,6 @@ button {
 
 .notice {
   border-bottom: 1px #c1c1c1 solid;
-  display: flex;
-  flex-direction: column;
 }
 
 .notice__title {
@@ -440,6 +435,7 @@ button {
 .contact__contaier {
   width: 300px;
   margin: 0 auto;
+  text-align: center;
 }
 
 .contact {
@@ -603,7 +599,7 @@ button {
   }
 
   .navbar {
-    max-width: 980px;
+    max-width: 988px;
     height: 70px;
     margin: 0 auto;
   }
@@ -727,7 +723,7 @@ button {
     background: url('../image/bg_pencil.png') no-repeat;
     background-position: 0 80%;
     background-color: #f4f5f7;
-    max-width: 980px;
+    max-width: 988px;
     margin: 0 auto;
     padding-top: 20px;
     padding-bottom: 32px;
@@ -759,7 +755,7 @@ button {
   /* notice */
   .notice__container {
     padding: 20px;
-    max-width: 980px;
+    max-width: 988px;
     margin: 0 auto;
   }
 

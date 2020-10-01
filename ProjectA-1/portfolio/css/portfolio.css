@@ -2,7 +2,7 @@
 
 /* Global */
 
-body {
+* {
   font-family: '나눔 고딕', 'NanumGothic', '돋움', 'Dotum', 'sans-serif';
   margin: 0;
 }

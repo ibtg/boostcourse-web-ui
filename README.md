@@ -28,8 +28,8 @@
 
 - [Design guide](https://drive.google.com/file/d/1bBKCSkeG5T5zZdK8kOX7O0Qyhvrq2E1w/view)
 
-- 수료증
+---
+
+### 수료증
 
 <img src="https://github.com/ibtg/boostcourse-web-ui/blob/master/naver_boostcourse_ui_certificate.JPG?raw=true">
-
-<img src="./naver_boostcourse_ui_certificate.JPG?raw=true">
